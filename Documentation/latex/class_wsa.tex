@@ -1,0 +1,71 @@
+\doxysection{Wsa Class Reference}
+\hypertarget{class_wsa}{}\label{class_wsa}\index{Wsa@{Wsa}}
+
+
+Handles the initialization and cleanup of Win\+Sock using the Singleton pattern.  
+
+
+
+
+{\ttfamily \#include $<$Wsa.\+h$>$}
+
+Inheritance diagram for Wsa\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_wsa}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_wsa_abc10c329d0f5c48bb3138e621feda74e}{initialize}} ()
+\item 
+bool \mbox{\hyperlink{class_wsa_af3437deb965917817c185aacb693dcb5}{was\+Initialized}} ()
+\item 
+void \mbox{\hyperlink{class_wsa_ab812c3d5bf629742a64c44bf08d5318e}{cleanup}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the initialization and cleanup of Win\+Sock using the Singleton pattern. 
+
+The \doxylink{class_wsa}{Wsa} class ensures that Win\+Sock is properly initialized and cleaned up using the Singleton pattern. It provides a single instance that can be accessed globally and guarantees that Win\+Sock is initialized only once during the application\textquotesingle{}s lifetime. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_wsa_ab812c3d5bf629742a64c44bf08d5318e}\label{class_wsa_ab812c3d5bf629742a64c44bf08d5318e} 
+\index{Wsa@{Wsa}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!Wsa@{Wsa}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void Wsa\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Cleans up Win\+Sock resources. \Hypertarget{class_wsa_abc10c329d0f5c48bb3138e621feda74e}\label{class_wsa_abc10c329d0f5c48bb3138e621feda74e} 
+\index{Wsa@{Wsa}!initialize@{initialize}}
+\index{initialize@{initialize}!Wsa@{Wsa}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Wsa\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initializes Win\+Sock.
+
+This function initializes Win\+Sock with version 2.\+2. If the initialization fails, a runtime\+\_\+error is thrown.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If Win\+Sock initialization fails. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_wsa_af3437deb965917817c185aacb693dcb5}\label{class_wsa_af3437deb965917817c185aacb693dcb5} 
+\index{Wsa@{Wsa}!wasInitialized@{wasInitialized}}
+\index{wasInitialized@{wasInitialized}!Wsa@{Wsa}}
+\doxysubsubsection{\texorpdfstring{wasInitialized()}{wasInitialized()}}
+{\footnotesize\ttfamily bool Wsa\+::was\+Initialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Checks if Win\+Sock has been successfully initialized.
+
+\begin{DoxyReturn}{Returns}
+True if Win\+Sock has been initialized, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Lib/include/Wsa.\+h\end{DoxyCompactItemize}

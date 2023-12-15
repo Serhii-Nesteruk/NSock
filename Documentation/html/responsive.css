@@ -1,0 +1,31 @@
+/* Responsive styles for smaller screens */
+@media (max-width: 600px) {
+    /* Adjust main content padding for small screens */
+    main {
+        padding: 10px;
+    }
+
+    /* Adjust header styles for small screens */
+    div.header {
+        padding: 10px;
+    }
+
+    /* Adjust footer styles for small screens */
+    div.footer {
+        padding: 5px;
+    }
+
+    /* Adjust navigation styles for small screens */
+    nav {
+        margin-bottom: 10px;
+    }
+
+    nav li {
+        margin-right: 5px;
+    }
+
+    /* Adjust table styles for small screens */
+    table {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,23 @@
+\doxysection{Ws\+::Is\+Sock\+Addr Concept Reference}
+\hypertarget{concept_ws_1_1_is_sock_addr}{}\label{concept_ws_1_1_is_sock_addr}\index{Ws::IsSockAddr@{Ws::IsSockAddr}}
+
+
+{\ttfamily \#include $<$Ws.\+h$>$}
+
+\doxysubsection{Concept definition}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{\textcolor{keyword}{concept\ }\mbox{\hyperlink{concept_ws_1_1_is_sock_addr}{Ws::IsSockAddr}}\ =\ \ std::is\_same\_v<T,\ sockaddr\_in>}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Detailed Description}
+Template concept for checking if a type is sockaddr\+\_\+in or sockaddr\+\_\+in6.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type to check. \\
+\hline
+\end{DoxyTemplParams}

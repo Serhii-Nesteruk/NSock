@@ -1,0 +1,102 @@
+\doxysection{Ws\+::Sock\+Addr\texorpdfstring{$<$}{<} sockaddr\+\_\+in \texorpdfstring{$>$}{>} Class Reference}
+\hypertarget{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4}{}\label{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4}\index{Ws::SockAddr$<$ sockaddr\_in $>$@{Ws::SockAddr$<$ sockaddr\_in $>$}}
+
+
+{\ttfamily \#include $<$Ws.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_a26dadb61c17f902402ea26b665987766}{set\+Type}} (const Address\+Type \&addr\+Type, sockaddr\+\_\+in \&sock\+Addr)
+\item 
+static void \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_aee5a0a449a393d0e0709fb45d10f06a8}{set\+Port}} (u\+\_\+short port, sockaddr\+\_\+in \&sock\+Addr)
+\item 
+static void \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_a20c2c3ada9b8ae2c9b713e4bb8737e07}{set\+Address}} (const std\+::string \&address, sockaddr\+\_\+in \&sock\+Addr)
+\item 
+static std\+::string \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_a28b6ab5ed8cb034b53f35853949758e4}{get\+Address}} (const sockaddr\+\_\+in \&sock\+Addr)
+\item 
+static Address\+Type \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_a55d9212469b6c3686adb5b23f7a631b1}{get\+Addr\+Type}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Template class for sockaddr structure with IPv4 address. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_a28b6ab5ed8cb034b53f35853949758e4}\label{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_a28b6ab5ed8cb034b53f35853949758e4} 
+\index{Ws::SockAddr$<$ sockaddr\_in $>$@{Ws::SockAddr$<$ sockaddr\_in $>$}!getAddress@{getAddress}}
+\index{getAddress@{getAddress}!Ws::SockAddr$<$ sockaddr\_in $>$@{Ws::SockAddr$<$ sockaddr\_in $>$}}
+\doxysubsubsection{\texorpdfstring{getAddress()}{getAddress()}}
+{\footnotesize\ttfamily static std\+::string \mbox{\hyperlink{class_ws_1_1_sock_addr}{Ws\+::\+Sock\+Addr}}$<$ sockaddr\+\_\+in $>$\+::get\+Address (\begin{DoxyParamCaption}\item[{const sockaddr\+\_\+in \&}]{sock\+Addr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Gets the IP address from sockaddr\+\_\+in.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sock\+Addr} & The sockaddr\+\_\+in structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The IP address as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_a55d9212469b6c3686adb5b23f7a631b1}\label{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_a55d9212469b6c3686adb5b23f7a631b1} 
+\index{Ws::SockAddr$<$ sockaddr\_in $>$@{Ws::SockAddr$<$ sockaddr\_in $>$}!getAddrType@{getAddrType}}
+\index{getAddrType@{getAddrType}!Ws::SockAddr$<$ sockaddr\_in $>$@{Ws::SockAddr$<$ sockaddr\_in $>$}}
+\doxysubsubsection{\texorpdfstring{getAddrType()}{getAddrType()}}
+{\footnotesize\ttfamily static Address\+Type \mbox{\hyperlink{class_ws_1_1_sock_addr}{Ws\+::\+Sock\+Addr}}$<$ sockaddr\+\_\+in $>$\+::get\+Addr\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Gets the address type of sockaddr\+\_\+in.
+
+\begin{DoxyReturn}{Returns}
+The address type. 
+\end{DoxyReturn}
+\Hypertarget{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_a20c2c3ada9b8ae2c9b713e4bb8737e07}\label{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_a20c2c3ada9b8ae2c9b713e4bb8737e07} 
+\index{Ws::SockAddr$<$ sockaddr\_in $>$@{Ws::SockAddr$<$ sockaddr\_in $>$}!setAddress@{setAddress}}
+\index{setAddress@{setAddress}!Ws::SockAddr$<$ sockaddr\_in $>$@{Ws::SockAddr$<$ sockaddr\_in $>$}}
+\doxysubsubsection{\texorpdfstring{setAddress()}{setAddress()}}
+{\footnotesize\ttfamily static void \mbox{\hyperlink{class_ws_1_1_sock_addr}{Ws\+::\+Sock\+Addr}}$<$ sockaddr\+\_\+in $>$\+::set\+Address (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address,  }\item[{sockaddr\+\_\+in \&}]{sock\+Addr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Sets the address for sockaddr\+\_\+in.
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & The IP address. \\
+\hline
+{\em sock\+Addr} & The sockaddr\+\_\+in structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_aee5a0a449a393d0e0709fb45d10f06a8}\label{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_aee5a0a449a393d0e0709fb45d10f06a8} 
+\index{Ws::SockAddr$<$ sockaddr\_in $>$@{Ws::SockAddr$<$ sockaddr\_in $>$}!setPort@{setPort}}
+\index{setPort@{setPort}!Ws::SockAddr$<$ sockaddr\_in $>$@{Ws::SockAddr$<$ sockaddr\_in $>$}}
+\doxysubsubsection{\texorpdfstring{setPort()}{setPort()}}
+{\footnotesize\ttfamily static void \mbox{\hyperlink{class_ws_1_1_sock_addr}{Ws\+::\+Sock\+Addr}}$<$ sockaddr\+\_\+in $>$\+::set\+Port (\begin{DoxyParamCaption}\item[{u\+\_\+short}]{port,  }\item[{sockaddr\+\_\+in \&}]{sock\+Addr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Sets the port for sockaddr\+\_\+in.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port number. \\
+\hline
+{\em sock\+Addr} & The sockaddr\+\_\+in structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_a26dadb61c17f902402ea26b665987766}\label{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_a26dadb61c17f902402ea26b665987766} 
+\index{Ws::SockAddr$<$ sockaddr\_in $>$@{Ws::SockAddr$<$ sockaddr\_in $>$}!setType@{setType}}
+\index{setType@{setType}!Ws::SockAddr$<$ sockaddr\_in $>$@{Ws::SockAddr$<$ sockaddr\_in $>$}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily static void \mbox{\hyperlink{class_ws_1_1_sock_addr}{Ws\+::\+Sock\+Addr}}$<$ sockaddr\+\_\+in $>$\+::set\+Type (\begin{DoxyParamCaption}\item[{const Address\+Type \&}]{addr\+Type,  }\item[{sockaddr\+\_\+in \&}]{sock\+Addr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Sets the address type for sockaddr\+\_\+in.
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr\+Type} & The address type. \\
+\hline
+{\em sock\+Addr} & The sockaddr\+\_\+in structure. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Lib/include/Ws.\+h\end{DoxyCompactItemize}

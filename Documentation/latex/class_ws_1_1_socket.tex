@@ -1,0 +1,260 @@
+\doxysection{Ws\+::Socket Class Reference}
+\hypertarget{class_ws_1_1_socket}{}\label{class_ws_1_1_socket}\index{Ws::Socket@{Ws::Socket}}
+
+
+{\ttfamily \#include $<$Ws.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830}{Socket\+Type}} \{ \mbox{\hyperlink{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830a0db45d2a4141101bdfe48e3314cfbca3}{UNDEFINED}}
+, \mbox{\hyperlink{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830a6a8389c72b69aa95f82e3ba835c8e207}{DGRAM}} = SOCK\+\_\+\+DGRAM
+, \mbox{\hyperlink{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830a2f05998d2a71cdc19b7109549bbe2646}{STREAM}} = SOCK\+\_\+\+STREAM
+ \}
+\item 
+enum class \mbox{\hyperlink{class_ws_1_1_socket_aa0ff397a479e6d64b4565dd0100959dc}{Protocol}} \{ \mbox{\hyperlink{class_ws_1_1_socket_aa0ff397a479e6d64b4565dd0100959dcae1f2d5134ed2543d38a0de9751cf75d9}{AUTO}} = 0
+, \mbox{\hyperlink{class_ws_1_1_socket_aa0ff397a479e6d64b4565dd0100959dcab136ef5f6a01d816991fe3cf7a6ac763}{TCP}} = IPPROTO\+\_\+\+TCP
+, \mbox{\hyperlink{class_ws_1_1_socket_aa0ff397a479e6d64b4565dd0100959dcaf5ef036b4d8b630721e51fe23489fbc9}{UDP}} = IPPROTO\+\_\+\+UDP
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static SOCKET \mbox{\hyperlink{class_ws_1_1_socket_a23ffa9be82ebf5ea179525f310ae1d6f}{create}} (const Address\+Type \&address\+Type, const \mbox{\hyperlink{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830}{Socket\+Type}} \&socket\+Type, const \mbox{\hyperlink{class_ws_1_1_socket_aa0ff397a479e6d64b4565dd0100959dc}{Protocol}} \&a\+Protocol=\mbox{\hyperlink{class_ws_1_1_socket_aa0ff397a479e6d64b4565dd0100959dcae1f2d5134ed2543d38a0de9751cf75d9}{Protocol\+::\+AUTO}})
+\item 
+static void \mbox{\hyperlink{class_ws_1_1_socket_aaeff768682a91da0397b4dab31d934a8}{bind}} (SOCKET sock, sockaddr \texorpdfstring{$\ast$}{*}name)
+\item 
+static void \mbox{\hyperlink{class_ws_1_1_socket_af30e0347908a10bc3985e02ca0865c13}{listen}} (SOCKET sock, int backlog=SOMAXCONN)
+\item 
+static void \mbox{\hyperlink{class_ws_1_1_socket_abec10f66c2d3e949fbd800dc90fa3cc8}{connect}} (SOCKET sock, sockaddr \texorpdfstring{$\ast$}{*}address)
+\item 
+static void \mbox{\hyperlink{class_ws_1_1_socket_a74d7ea36f07c0813d092f2217ba7859d}{send}} (SOCKET sock, const char \texorpdfstring{$\ast$}{*}data, int flags=0)
+\item 
+static void \mbox{\hyperlink{class_ws_1_1_socket_a8144f0ffdf74a82c50333f6a05888b98}{recv}} (SOCKET sock, char \texorpdfstring{$\ast$}{*}buf, int buf\+Size, int flags=0)
+\item 
+static SOCKET \mbox{\hyperlink{class_ws_1_1_socket_a3f45102831357757f54ca13dbadb6b8b}{accept}} (SOCKET sock, sockaddr \texorpdfstring{$\ast$}{*}addr)
+\item 
+static void \mbox{\hyperlink{class_ws_1_1_socket_a993ec58b98ecaaca02493763b9ac5e9d}{close\+Socket}} (SOCKET sock)
+\item 
+static bool \mbox{\hyperlink{class_ws_1_1_socket_ae3a3235389daac5c8ab3bf09cc3b2d77}{is\+Closed}} (SOCKET sock)
+\item 
+static bool \mbox{\hyperlink{class_ws_1_1_socket_a56e2541231c1628f0ae46e5d65393cc2}{is\+Valid}} (SOCKET sock)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a socket with static methods for socket operations. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_ws_1_1_socket_aa0ff397a479e6d64b4565dd0100959dc}\label{class_ws_1_1_socket_aa0ff397a479e6d64b4565dd0100959dc} 
+\index{Ws::Socket@{Ws::Socket}!Protocol@{Protocol}}
+\index{Protocol@{Protocol}!Ws::Socket@{Ws::Socket}}
+\doxysubsubsection{\texorpdfstring{Protocol}{Protocol}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{class_ws_1_1_socket_aa0ff397a479e6d64b4565dd0100959dc}{Ws\+::\+Socket\+::\+Protocol}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Enumeration representing socket protocols. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AUTO@{AUTO}!Ws::Socket@{Ws::Socket}}\index{Ws::Socket@{Ws::Socket}!AUTO@{AUTO}}}\Hypertarget{class_ws_1_1_socket_aa0ff397a479e6d64b4565dd0100959dcae1f2d5134ed2543d38a0de9751cf75d9}\label{class_ws_1_1_socket_aa0ff397a479e6d64b4565dd0100959dcae1f2d5134ed2543d38a0de9751cf75d9} 
+AUTO&Automatically determine the protocol. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TCP@{TCP}!Ws::Socket@{Ws::Socket}}\index{Ws::Socket@{Ws::Socket}!TCP@{TCP}}}\Hypertarget{class_ws_1_1_socket_aa0ff397a479e6d64b4565dd0100959dcab136ef5f6a01d816991fe3cf7a6ac763}\label{class_ws_1_1_socket_aa0ff397a479e6d64b4565dd0100959dcab136ef5f6a01d816991fe3cf7a6ac763} 
+TCP&TCP protocol. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UDP@{UDP}!Ws::Socket@{Ws::Socket}}\index{Ws::Socket@{Ws::Socket}!UDP@{UDP}}}\Hypertarget{class_ws_1_1_socket_aa0ff397a479e6d64b4565dd0100959dcaf5ef036b4d8b630721e51fe23489fbc9}\label{class_ws_1_1_socket_aa0ff397a479e6d64b4565dd0100959dcaf5ef036b4d8b630721e51fe23489fbc9} 
+UDP&UDP protocol. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830}\label{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830} 
+\index{Ws::Socket@{Ws::Socket}!SocketType@{SocketType}}
+\index{SocketType@{SocketType}!Ws::Socket@{Ws::Socket}}
+\doxysubsubsection{\texorpdfstring{SocketType}{SocketType}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830}{Ws\+::\+Socket\+::\+Socket\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Enumeration representing the socket types. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNDEFINED@{UNDEFINED}!Ws::Socket@{Ws::Socket}}\index{Ws::Socket@{Ws::Socket}!UNDEFINED@{UNDEFINED}}}\Hypertarget{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830a0db45d2a4141101bdfe48e3314cfbca3}\label{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830a0db45d2a4141101bdfe48e3314cfbca3} 
+UNDEFINED&Undefined socket type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DGRAM@{DGRAM}!Ws::Socket@{Ws::Socket}}\index{Ws::Socket@{Ws::Socket}!DGRAM@{DGRAM}}}\Hypertarget{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830a6a8389c72b69aa95f82e3ba835c8e207}\label{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830a6a8389c72b69aa95f82e3ba835c8e207} 
+DGRAM&Datagram socket type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STREAM@{STREAM}!Ws::Socket@{Ws::Socket}}\index{Ws::Socket@{Ws::Socket}!STREAM@{STREAM}}}\Hypertarget{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830a2f05998d2a71cdc19b7109549bbe2646}\label{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830a2f05998d2a71cdc19b7109549bbe2646} 
+STREAM&Stream socket type. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ws_1_1_socket_a3f45102831357757f54ca13dbadb6b8b}\label{class_ws_1_1_socket_a3f45102831357757f54ca13dbadb6b8b} 
+\index{Ws::Socket@{Ws::Socket}!accept@{accept}}
+\index{accept@{accept}!Ws::Socket@{Ws::Socket}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily static SOCKET Ws\+::\+Socket\+::accept (\begin{DoxyParamCaption}\item[{SOCKET}]{sock,  }\item[{sockaddr \texorpdfstring{$\ast$}{*}}]{addr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Accepts an incoming connection on a listening socket.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sock} & The listening socket descriptor. \\
+\hline
+{\em addr} & The sockaddr structure representing the client\textquotesingle{}s address. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The socket descriptor for the accepted connection. 
+\end{DoxyReturn}
+\Hypertarget{class_ws_1_1_socket_aaeff768682a91da0397b4dab31d934a8}\label{class_ws_1_1_socket_aaeff768682a91da0397b4dab31d934a8} 
+\index{Ws::Socket@{Ws::Socket}!bind@{bind}}
+\index{bind@{bind}!Ws::Socket@{Ws::Socket}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily static void Ws\+::\+Socket\+::bind (\begin{DoxyParamCaption}\item[{SOCKET}]{sock,  }\item[{sockaddr \texorpdfstring{$\ast$}{*}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Binds a socket to a specific address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket descriptor. \\
+\hline
+{\em name} & The sockaddr structure representing the address. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ws_1_1_socket_a993ec58b98ecaaca02493763b9ac5e9d}\label{class_ws_1_1_socket_a993ec58b98ecaaca02493763b9ac5e9d} 
+\index{Ws::Socket@{Ws::Socket}!closeSocket@{closeSocket}}
+\index{closeSocket@{closeSocket}!Ws::Socket@{Ws::Socket}}
+\doxysubsubsection{\texorpdfstring{closeSocket()}{closeSocket()}}
+{\footnotesize\ttfamily static void Ws\+::\+Socket\+::close\+Socket (\begin{DoxyParamCaption}\item[{SOCKET}]{sock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Closes a socket.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket descriptor to close. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ws_1_1_socket_abec10f66c2d3e949fbd800dc90fa3cc8}\label{class_ws_1_1_socket_abec10f66c2d3e949fbd800dc90fa3cc8} 
+\index{Ws::Socket@{Ws::Socket}!connect@{connect}}
+\index{connect@{connect}!Ws::Socket@{Ws::Socket}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily static void Ws\+::\+Socket\+::connect (\begin{DoxyParamCaption}\item[{SOCKET}]{sock,  }\item[{sockaddr \texorpdfstring{$\ast$}{*}}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Connects a socket to a specific address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket descriptor. \\
+\hline
+{\em address} & The sockaddr structure representing the address. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ws_1_1_socket_a23ffa9be82ebf5ea179525f310ae1d6f}\label{class_ws_1_1_socket_a23ffa9be82ebf5ea179525f310ae1d6f} 
+\index{Ws::Socket@{Ws::Socket}!create@{create}}
+\index{create@{create}!Ws::Socket@{Ws::Socket}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily static SOCKET Ws\+::\+Socket\+::create (\begin{DoxyParamCaption}\item[{const Address\+Type \&}]{address\+Type,  }\item[{const \mbox{\hyperlink{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830}{Socket\+Type}} \&}]{socket\+Type,  }\item[{const \mbox{\hyperlink{class_ws_1_1_socket_aa0ff397a479e6d64b4565dd0100959dc}{Protocol}} \&}]{a\+Protocol = {\ttfamily \mbox{\hyperlink{class_ws_1_1_socket_aa0ff397a479e6d64b4565dd0100959dcae1f2d5134ed2543d38a0de9751cf75d9}{Protocol\+::\+AUTO}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a socket with the specified parameters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em address\+Type} & The address type of the socket. \\
+\hline
+{\em socket\+Type} & The type of the socket. \\
+\hline
+{\em a\+Protocol} & The protocol to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created socket descriptor. 
+\end{DoxyReturn}
+\Hypertarget{class_ws_1_1_socket_ae3a3235389daac5c8ab3bf09cc3b2d77}\label{class_ws_1_1_socket_ae3a3235389daac5c8ab3bf09cc3b2d77} 
+\index{Ws::Socket@{Ws::Socket}!isClosed@{isClosed}}
+\index{isClosed@{isClosed}!Ws::Socket@{Ws::Socket}}
+\doxysubsubsection{\texorpdfstring{isClosed()}{isClosed()}}
+{\footnotesize\ttfamily static bool Ws\+::\+Socket\+::is\+Closed (\begin{DoxyParamCaption}\item[{SOCKET}]{sock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checks if a socket is closed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket descriptor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the socket is closed, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_ws_1_1_socket_a56e2541231c1628f0ae46e5d65393cc2}\label{class_ws_1_1_socket_a56e2541231c1628f0ae46e5d65393cc2} 
+\index{Ws::Socket@{Ws::Socket}!isValid@{isValid}}
+\index{isValid@{isValid}!Ws::Socket@{Ws::Socket}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily static bool Ws\+::\+Socket\+::is\+Valid (\begin{DoxyParamCaption}\item[{SOCKET}]{sock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checks if a socket is valid.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket descriptor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the socket is valid, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_ws_1_1_socket_af30e0347908a10bc3985e02ca0865c13}\label{class_ws_1_1_socket_af30e0347908a10bc3985e02ca0865c13} 
+\index{Ws::Socket@{Ws::Socket}!listen@{listen}}
+\index{listen@{listen}!Ws::Socket@{Ws::Socket}}
+\doxysubsubsection{\texorpdfstring{listen()}{listen()}}
+{\footnotesize\ttfamily static void Ws\+::\+Socket\+::listen (\begin{DoxyParamCaption}\item[{SOCKET}]{sock,  }\item[{int}]{backlog = {\ttfamily SOMAXCONN} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Listens for incoming connections on a socket.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket descriptor. \\
+\hline
+{\em backlog} & The maximum length of the queue for pending connections. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ws_1_1_socket_a8144f0ffdf74a82c50333f6a05888b98}\label{class_ws_1_1_socket_a8144f0ffdf74a82c50333f6a05888b98} 
+\index{Ws::Socket@{Ws::Socket}!recv@{recv}}
+\index{recv@{recv}!Ws::Socket@{Ws::Socket}}
+\doxysubsubsection{\texorpdfstring{recv()}{recv()}}
+{\footnotesize\ttfamily static void Ws\+::\+Socket\+::recv (\begin{DoxyParamCaption}\item[{SOCKET}]{sock,  }\item[{char \texorpdfstring{$\ast$}{*}}]{buf,  }\item[{int}]{buf\+Size,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Receives data from a connected socket.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket descriptor. \\
+\hline
+{\em buf} & The buffer to store received data. \\
+\hline
+{\em buf\+Size} & The size of the buffer. \\
+\hline
+{\em flags} & Optional flags. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ws_1_1_socket_a74d7ea36f07c0813d092f2217ba7859d}\label{class_ws_1_1_socket_a74d7ea36f07c0813d092f2217ba7859d} 
+\index{Ws::Socket@{Ws::Socket}!send@{send}}
+\index{send@{send}!Ws::Socket@{Ws::Socket}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily static void Ws\+::\+Socket\+::send (\begin{DoxyParamCaption}\item[{SOCKET}]{sock,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{data,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Sends data over a connected socket.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket descriptor. \\
+\hline
+{\em data} & The data to send. \\
+\hline
+{\em flags} & Optional flags. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Lib/include/Ws.\+h\end{DoxyCompactItemize}

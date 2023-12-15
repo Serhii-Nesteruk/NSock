@@ -1,0 +1,81 @@
+\doxysection{Socket.\+h}
+\hypertarget{_socket_8h_source}{}\label{_socket_8h_source}\index{Lib/include/Socket.h@{Lib/include/Socket.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Ws.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{template}<Ws::IsSockAddr\ \_SockAddr\ =\ sockaddr\_in>}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_socket}{Socket}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830}{SocketType}}\ =\ \mbox{\hyperlink{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830}{Ws::Socket::SocketType}};}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_socket_ad86ab0038e65e36b708b03b430c5d3a7}{Socket}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_socket_ad86ab0038e65e36b708b03b430c5d3a7}{Socket}}(\textcolor{keyword}{const}\ Ws::AddressType\&\ addressType,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830}{SocketType}}\&\ socketType,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \_SockAddr\ sockAddr,\ SOCKET\ descriptor);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_socket_ad86ab0038e65e36b708b03b430c5d3a7}{Socket}}(\textcolor{keyword}{const}\ Ws::AddressType\&\ addressType,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830}{SocketType}}\&\ socketType);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_socket_ad86ab0038e65e36b708b03b430c5d3a7}{Socket}}(\textcolor{keyword}{const}\ Ws::AddressType\&\ addressType,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830}{SocketType}}\&\ socketType,}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \_SockAddr\&\ address,\ \textcolor{keywordtype}{bool}\ shouldBind\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ shouldConnect\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_socket_ad86ab0038e65e36b708b03b430c5d3a7}{Socket}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_socket}{Socket}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{class_socket}{Socket}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_socket}{Socket}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{class_socket}{Socket}}\&\ operator=(\mbox{\hyperlink{class_socket}{Socket}}\&\&\ other);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{class_socket_ad86ab0038e65e36b708b03b430c5d3a7}{Socket}}(\mbox{\hyperlink{class_socket}{Socket}}\&\&\ other);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{class_socket_ab20160b669580b5a9c5f185ca9326d87}{\string~Socket}}();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_socket_a047faa3abefe96e2ee5dc3666a42d68c}{bind}}(\_SockAddr\&\ address);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_socket_a9ba1d243b4a95531551fd0486f1fef27}{create}}();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_socket_a9ba1d243b4a95531551fd0486f1fef27}{create}}(\textcolor{keyword}{const}\ Ws::AddressType\&\ addressType,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830}{SocketType}}\&\ socketType);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_socket_aa4501d03821261ac4e1506e953085d4b}{close}}();}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_socket_ad5190ff361f90de2164ac6c6d265e1ef}{listen}}(\textcolor{keywordtype}{int}\ backlog\ =\ SOMAXCONN);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_socket_a24ce40161dc9086b52788b119e0a70b8}{connect}}(\_SockAddr\&\ address);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00131\ \ \ \ \ \mbox{\hyperlink{class_socket}{Socket}}\ \mbox{\hyperlink{class_socket_ac71ec77b81020d1e19f85d31cdb51b20}{accept}}();}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_socket_a2c92bc2dd43df6290deeb80f176cb308}{setAddressType}}();}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_socket_ad7aaa65d9da2a850a8dca18b2c9cd7cb}{setSocketType}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830}{SocketType}}\&\ socketType);}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_socket_a7e9a4edbbc930a214ad784fcf32d938d}{setAddress}}(\textcolor{keyword}{const}\ \_SockAddr\ sockAddr);}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00172\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_socket_a1a1b29a7800a285b4d453f17607400f0}{wasCreated}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00179\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_socket_a25372f2f94a5ebfc267211575316b719}{wasBound}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00187\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_socket_a24c629f83a4127c9a772852d4a77e9e4}{alreadyListening}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00194\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_socket_a17a24f5189818c6322a78ff94a9db2a5}{alreadyConnected}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00201\ \ \ \ \ [[nodiscard]]\ SOCKET\ \mbox{\hyperlink{class_socket_a207376407cfbf576cfe7265905db8621}{getDescriptor}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00202\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordtype}{void}\ zeroingData(\mbox{\hyperlink{class_socket}{Socket}}\&\ sock);}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{bool}\ \_wasCreated\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordtype}{bool}\ \_wasBound\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordtype}{bool}\ \_alreadyConnected\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordtype}{bool}\ \_alreadyListening\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00216\ \ \ \ \ SOCKET\ \_sockDescriptor\{\ INVALID\_SOCKET\ \};}
+\DoxyCodeLine{00217\ \ \ \ \ Ws::AddressType\ \_addressType\ =\ Ws::AddressType::None;}
+\DoxyCodeLine{00218\ \ \ \ \ SocketType\ \_socketType\ =\ SocketType::UNDEFINED;}
+\DoxyCodeLine{00219\ \ \ \ \ \_SockAddr\ \_address;}
+\DoxyCodeLine{00220\ \};}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \textcolor{preprocessor}{\#include\ "{}Socket.inl"{}}}
+
+\end{DoxyCode}

@@ -67,11 +67,11 @@ Socket<_SockAddr>::Socket(const Ws::AddressType& addressType,
 	: _addressType(addressType), _socketType(socketType), _address(address)
 {
 	this->create();
-	if (shouldBind)
+	if (shouldBind && !shouldConnect)
 	{
 		this->bind(address);
 	}
-	if (shouldConnect)
+	if (shouldConnect && !shouldBind)
 	{
 		this->connect(address);
 	}
