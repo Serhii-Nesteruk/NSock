@@ -2,7 +2,7 @@
 
 template<Ws::IsSockAddr _SockAddr>
 Socket<_SockAddr>::Socket(const Ws::AddressType& addressType, const SocketType& socketType,
-	_SockAddr sockAddr, SOCKET descriptor)
+	_SockAddr& sockAddr, SOCKET descriptor)
 	: _addressType(addressType), _socketType(socketType), _address(sockAddr)
 {
 	if (descriptor == INVALID_SOCKET)

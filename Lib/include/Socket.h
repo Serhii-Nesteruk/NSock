@@ -29,7 +29,7 @@ public:
      * @param descriptor    Socket descriptor.
      */
 	Socket(const Ws::AddressType& addressType, const SocketType& socketType,
-		_SockAddr sockAddr, SOCKET descriptor);
+		_SockAddr& sockAddr, SOCKET descriptor);
 
 	/**
 	* @brief Constructor with address type and socket type.
@@ -214,8 +214,8 @@ private:
 	bool _alreadyConnected{ false };
 	bool _alreadyListening{ false };
 	SOCKET _sockDescriptor{ INVALID_SOCKET };
-	Ws::AddressType _addressType = Ws::AddressType::None;
-	SocketType _socketType = SocketType::UNDEFINED;
+	Ws::AddressType _addressType{ Ws::AddressType::None };
+	SocketType _socketType{ SocketType::UNDEFINED };
 	_SockAddr _address;
 };
 

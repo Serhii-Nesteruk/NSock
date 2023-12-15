@@ -1,14 +1,11 @@
 file(
         GLOB Sources
         "include/*.h"
+        "include/*.inl"
         "source/*.cpp"
 )
 
-add_library(Socket ${Sources}
-        include/Socket.inl
-        include/Socket.h
-        source/Address.cpp
-        include/Address.h)
+add_library(Socket ${Sources})
 
 target_include_directories(Socket PUBLIC ./include)
 
