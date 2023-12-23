@@ -158,3 +158,21 @@ void Ws::Socket::recv(SOCKET sock, char* buf, int bufSize, int flags)
 		buf[bytesRead] = '\0';
 	}
 }
+
+void Ws::Socket::sendto(SOCKET sock, const char* message, int flags, const sockaddr* to, int tolen)
+{
+	int sendingResult = ::sendto(sock, message, strlen(message), flags, to, tolen);
+	if (sendingResult == SOCKET_ERROR)
+	{
+		handleSocketError(sock);
+	}
+}
+
+void Ws::Socket::recvfrom(SOCKET sock, char* buf, int len, sockaddr* from, int flags, int* fromlen)
+{
+	int receivingResult = ::recvfrom(sock, buf, len, flags, from, fromlen);
+	if (receivingResult == SOCKET_ERROR)
+	{
+		handleSocketError(sock);
+	}
+}

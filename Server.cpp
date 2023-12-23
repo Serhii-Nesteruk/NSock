@@ -1,8 +1,7 @@
-#include <WS2tcpip.h>
-
 #include "Socket.h"
 #include "Address.h"
 #include "Wsa.h"
+#include "TCPSocket.h"
 
 int main()
 {
@@ -10,18 +9,15 @@ int main()
 	{
 		Wsa::instance().initialize();
 
-		Address<sockaddr_in, Ws::SockAddr4> serverAddr(Ws::AddressType::IPv4, 8088, "127.0.0.1");
+		Address serverAddr(Ws::AddressType::IPv4, 8088, "127.0.0.1");
 
-		Socket serverSocket(Ws::AddressType::IPv4, Ws::Socket::SocketType::STREAM,
-			serverAddr.getSockAddress(), true, false);
+		TCPSocket serverSocket(Ws::AddressType::IPv4, serverAddr, true, false);
 		serverSocket.listen();
 
-		Socket<sockaddr_in> clientSocket = serverSocket.accept();
+		Socket clientSocket = serverSocket.accept();
 
 		std::string message{ "Hello World!!!" };
-		int messageSize = message.size();
-		Ws::Socket::send(clientSocket.getDescriptor(), reinterpret_cast<const char*>(&messageSize));
-		Ws::Socket::send(clientSocket.getDescriptor(), message.data());
+		serverSocket.send(clientSocket, message);
 
 		Wsa::instance().cleanup();
 

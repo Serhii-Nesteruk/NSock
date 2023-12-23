@@ -135,6 +135,35 @@ namespace Ws
          * @return True if the socket is valid, false otherwise.
          */
 		static bool isValid(SOCKET sock);
+
+		/**
+         * @brief Sends data to a specific destination using the given socket.
+         *
+         * @param sock The socket descriptor.
+         * @param message A pointer to the buffer containing the data to be sent.
+         * @param flags A set of flags that modify the behavior of the function.
+         * @param to A pointer to the destination address.
+         * @param tolen The size, in bytes, of the address structure pointed to by 'to'.
+         *
+         * @note This function is a wrapper around the system-level sendto function.
+         * @see sendto
+         */
+		static void sendto(SOCKET sock, const char* message, int flags,const sockaddr* to, int tolen);
+
+		/**
+         * @brief Receives data along with information about the sender using the given socket.
+         *
+         * @param sock The socket descriptor.
+         * @param buf A pointer to the buffer to receive the incoming data.
+         * @param len The length, in bytes, of the buffer pointed to by 'buf'.
+         * @param from A pointer to a sockaddr structure that will be filled with the source address.
+         * @param flags A set of flags that modify the behavior of the function.
+         * @param fromlen A pointer to the size, in bytes, of the address structure pointed to by 'from'.
+         *
+         * @note This function is a wrapper around the system-level recvfrom function.
+         * @see recvfrom
+         */
+		static void recvfrom(SOCKET sock, char* buf, int len, sockaddr* from,int flags, int* fromlen);
 	};
 
 	/**

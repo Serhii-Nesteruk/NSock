@@ -1,33 +1,32 @@
-#include <iostream>
-#include <WS2tcpip.h>
-
-#include "Socket.h"
+#include "TCPSocket.h"
 #include "Wsa.h"
+
+#include <iostream>
 
 int main()
 {
-	Wsa::instance().initialize();
+	try
+	{
+		Wsa::instance().initialize();
 
-	sockaddr_in serverAddr;
-	Ws::SockAddr4::setType(Ws::AddressType::IPv4, serverAddr);
-	Ws::SockAddr4::setPort(8088, serverAddr);
-	Ws::SockAddr4::setAddress("127.0.0.1", serverAddr);
+		Address serverAddr(Ws::AddressType::IPv4, 8088, "127.0.0.1");
 
-	Socket<sockaddr_in> clientSocket(Ws::AddressType::IPv4, Ws::Socket::SocketType::STREAM,
-		serverAddr, false, true);
+		TCPSocket clientSocket(Ws::AddressType::IPv4, serverAddr, false, true);
 
-	int messageSize = 0;
-	Ws::Socket::recv(clientSocket.getDescriptor(), reinterpret_cast<char*>(&messageSize), sizeof(messageSize));
+		std::string message = clientSocket.received();
 
-	std::string message{ };
-	message.resize(messageSize);
-	Ws::Socket::recv(clientSocket.getDescriptor(), message.data(), messageSize);
+		std::cout << message << std::endl;
 
-	std::cout << message << std::endl;
+		Wsa::instance().cleanup();
 
-	Wsa::instance().cleanup();
-
-	system("pause");
+		system("pause");
+	}
+	catch (const std::runtime_error& error)
+	{
+		std::cerr << "================" << std::endl;
+		std::cerr << error.what() << std::endl;
+		std::cerr << "================" << std::endl;
+	}
 
 	return 0;
 }

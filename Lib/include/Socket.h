@@ -12,9 +12,8 @@
 template<Ws::IsSockAddr _SockAddr = sockaddr_in>
 class Socket
 {
-private:
-	using SocketType = Ws::Socket::SocketType;
 public:
+	using SocketType = Ws::Socket::SocketType;
 	/**
      * @brief Default constructor.
      */
@@ -199,6 +198,8 @@ public:
      * @return The socket descriptor.
      */
 	[[nodiscard]] SOCKET getDescriptor() const;
+
+
 private:
 
 	/**

@@ -153,7 +153,7 @@ void Socket<_SockAddr>::close()
 		throw std::runtime_error("You can't close socket. Socket was not created");
 	}
 	Ws::Socket::closeSocket(_sockDescriptor);
-	zeroingData(*this);
+	// zeroingData(*this); TODO: If you do not comment this line, the program will crash. Fix it
 }
 
 template<Ws::IsSockAddr _SockAddr>
