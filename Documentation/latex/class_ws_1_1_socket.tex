@@ -39,7 +39,11 @@ static void \mbox{\hyperlink{class_ws_1_1_socket_a993ec58b98ecaaca02493763b9ac5e
 static bool \mbox{\hyperlink{class_ws_1_1_socket_ae3a3235389daac5c8ab3bf09cc3b2d77}{is\+Closed}} (SOCKET sock)
 \item 
 static bool \mbox{\hyperlink{class_ws_1_1_socket_a56e2541231c1628f0ae46e5d65393cc2}{is\+Valid}} (SOCKET sock)
-\end{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_ws_1_1_socket_a39704c7a7216fc23c064b089b37eb47b}{sendto}} (SOCKET sock, const char \texorpdfstring{$\ast$}{*}message, int flags, const sockaddr \texorpdfstring{$\ast$}{*}to, int tolen)
+\begin{DoxyCompactList}\small\item\em Sends data to a specific destination using the given socket. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_ws_1_1_socket_a3a8f81540bb882fb12e44c4286fc4a37}{recvfrom}} (SOCKET sock, char \texorpdfstring{$\ast$}{*}buf, int len, sockaddr \texorpdfstring{$\ast$}{*}from, int flags, int \texorpdfstring{$\ast$}{*}fromlen)
+\begin{DoxyCompactList}\small\item\em Receives data along with information about the sender using the given socket. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -236,6 +240,37 @@ Receives data from a connected socket.
 {\em flags} & Optional flags. \\
 \hline
 \end{DoxyParams}
+\Hypertarget{class_ws_1_1_socket_a3a8f81540bb882fb12e44c4286fc4a37}\label{class_ws_1_1_socket_a3a8f81540bb882fb12e44c4286fc4a37} 
+\index{Ws::Socket@{Ws::Socket}!recvfrom@{recvfrom}}
+\index{recvfrom@{recvfrom}!Ws::Socket@{Ws::Socket}}
+\doxysubsubsection{\texorpdfstring{recvfrom()}{recvfrom()}}
+{\footnotesize\ttfamily static void Ws\+::\+Socket\+::recvfrom (\begin{DoxyParamCaption}\item[{SOCKET}]{sock,  }\item[{char \texorpdfstring{$\ast$}{*}}]{buf,  }\item[{int}]{len,  }\item[{sockaddr \texorpdfstring{$\ast$}{*}}]{from,  }\item[{int}]{flags,  }\item[{int \texorpdfstring{$\ast$}{*}}]{fromlen }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Receives data along with information about the sender using the given socket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket descriptor. \\
+\hline
+{\em buf} & A pointer to the buffer to receive the incoming data. \\
+\hline
+{\em len} & The length, in bytes, of the buffer pointed to by \textquotesingle{}buf\textquotesingle{}. \\
+\hline
+{\em from} & A pointer to a sockaddr structure that will be filled with the source address. \\
+\hline
+{\em flags} & A set of flags that modify the behavior of the function. \\
+\hline
+{\em fromlen} & A pointer to the size, in bytes, of the address structure pointed to by \textquotesingle{}from\textquotesingle{}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is a wrapper around the system-\/level recvfrom function. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_ws_1_1_socket_a3a8f81540bb882fb12e44c4286fc4a37}{recvfrom} 
+\end{DoxySeeAlso}
 \Hypertarget{class_ws_1_1_socket_a74d7ea36f07c0813d092f2217ba7859d}\label{class_ws_1_1_socket_a74d7ea36f07c0813d092f2217ba7859d} 
 \index{Ws::Socket@{Ws::Socket}!send@{send}}
 \index{send@{send}!Ws::Socket@{Ws::Socket}}
@@ -253,6 +288,35 @@ Sends data over a connected socket.
 {\em flags} & Optional flags. \\
 \hline
 \end{DoxyParams}
+\Hypertarget{class_ws_1_1_socket_a39704c7a7216fc23c064b089b37eb47b}\label{class_ws_1_1_socket_a39704c7a7216fc23c064b089b37eb47b} 
+\index{Ws::Socket@{Ws::Socket}!sendto@{sendto}}
+\index{sendto@{sendto}!Ws::Socket@{Ws::Socket}}
+\doxysubsubsection{\texorpdfstring{sendto()}{sendto()}}
+{\footnotesize\ttfamily static void Ws\+::\+Socket\+::sendto (\begin{DoxyParamCaption}\item[{SOCKET}]{sock,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{message,  }\item[{int}]{flags,  }\item[{const sockaddr \texorpdfstring{$\ast$}{*}}]{to,  }\item[{int}]{tolen }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sends data to a specific destination using the given socket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket descriptor. \\
+\hline
+{\em message} & A pointer to the buffer containing the data to be sent. \\
+\hline
+{\em flags} & A set of flags that modify the behavior of the function. \\
+\hline
+{\em to} & A pointer to the destination address. \\
+\hline
+{\em tolen} & The size, in bytes, of the address structure pointed to by \textquotesingle{}to\textquotesingle{}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is a wrapper around the system-\/level sendto function. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_ws_1_1_socket_a39704c7a7216fc23c064b089b37eb47b}{sendto} 
+\end{DoxySeeAlso}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

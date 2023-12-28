@@ -6,7 +6,7 @@
 \DoxyCodeLine{00002\ }
 \DoxyCodeLine{00003\ \textcolor{keyword}{template}<Ws::IsSockAddr\ \_SockAddr>}
 \DoxyCodeLine{00004\ \mbox{\hyperlink{class_socket_ad86ab0038e65e36b708b03b430c5d3a7}{Socket<\_SockAddr>::Socket}}(\textcolor{keyword}{const}\ Ws::AddressType\&\ addressType,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_ws_1_1_socket_a30a1da37d3070298bccb67179d778830}{SocketType}}\&\ socketType,}
-\DoxyCodeLine{00005\ \ \ \ \ \_SockAddr\ sockAddr,\ SOCKET\ descriptor)}
+\DoxyCodeLine{00005\ \ \ \ \ \_SockAddr\&\ sockAddr,\ SOCKET\ descriptor)}
 \DoxyCodeLine{00006\ \ \ \ \ :\ \_addressType(addressType),\ \_socketType(socketType),\ \_address(sockAddr)}
 \DoxyCodeLine{00007\ \{}
 \DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordflow}{if}\ (descriptor\ ==\ INVALID\_SOCKET)}
@@ -157,7 +157,7 @@
 \DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}You\ can't\ close\ socket.\ Socket\ was\ not\ created"{}});}
 \DoxyCodeLine{00154\ \ \ \ \ \}}
 \DoxyCodeLine{00155\ \ \ \ \ \mbox{\hyperlink{class_ws_1_1_socket_a993ec58b98ecaaca02493763b9ac5e9d}{Ws::Socket::closeSocket}}(\_sockDescriptor);}
-\DoxyCodeLine{00156\ \ \ \ \ zeroingData(*\textcolor{keyword}{this});}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{comment}{//\ zeroingData(*this);\ TODO:\ If\ you\ do\ not\ comment\ this\ line,\ the\ program\ will\ crash.\ Fix\ it}}
 \DoxyCodeLine{00157\ \}}
 \DoxyCodeLine{00158\ }
 \DoxyCodeLine{00159\ \textcolor{keyword}{template}<Ws::IsSockAddr\ \_SockAddr>}

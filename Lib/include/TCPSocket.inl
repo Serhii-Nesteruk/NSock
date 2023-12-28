@@ -26,9 +26,9 @@ TCPSocket<_SockAddr>::TCPSocket(TCPSocket&& other) : Socket<_SockAddr>(other)
 {
 	if (this != &other)
 	{
-		this->_socketAddress = 0;
+		this->_socketAddress = Address();
 		_socketAddress = other._socketAddress;
-		other._socketAddress = 0;
+		other._socketAddress = Address();
 	}
 }
 

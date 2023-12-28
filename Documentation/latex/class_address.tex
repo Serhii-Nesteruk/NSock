@@ -1,7 +1,256 @@
-\doxysection{Address Class Reference}
-\hypertarget{class_address}{}\label{class_address}\index{Address@{Address}}
-
-
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysection{Address\texorpdfstring{$<$}{<} \+\_\+\+Sock\+Addr\+In, \+\_\+\+Sock\+Addr \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_address}{}\label{class_address}\index{Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
 \item 
-Lib/include/Address.\+h\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_address_a48ed49b37385288126c3f136520f7314}{Address}} (const \mbox{\hyperlink{class_address}{Address}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor for the address object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_address}{Address}} \& \mbox{\hyperlink{class_address_a4f1e2d8118ee94f6192df2ede88159aa}{operator=}} (const \mbox{\hyperlink{class_address}{Address}} \&other)
+\begin{DoxyCompactList}\small\item\em Assignment operator for the address object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_address_a3487676e9dd094766e059e0d33835186}{Address}} (const Ws\+::\+Address\+Type \&address\+Type, int port, const std\+::string \&address)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_address}{Address} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_address_a93a0d650e4cdd4c103c19e60ed3f6b5d}{set\+All}} (const Ws\+::\+Address\+Type \&address\+Type, int port, const std\+::string \&address)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_address}{Address} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_address_a10b4d2f4c40da6ac1de8bf575173340e}{set\+Address\+Type}} (const Ws\+::\+Address\+Type \&address\+Type)
+\begin{DoxyCompactList}\small\item\em Sets the address type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_address_aeb4f56ec646e3685017d44b7298d4ade}{set\+Port}} (int port)
+\begin{DoxyCompactList}\small\item\em Sets the port number. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_address_ab9277354ee44beb9ce1ca65ef988e89f}{set\+Address}} (const std\+::string \&address)
+\begin{DoxyCompactList}\small\item\em Sets the address. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_address_ac2d49203a8b7c377ffe6fda4e610de59}{get\+Port}} () const
+\begin{DoxyCompactList}\small\item\em Returns the port number. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_address_aede27756d8a69db67bb57c932d574fe1}{get\+Address\+Str}} () const
+\begin{DoxyCompactList}\small\item\em Returns the string representing the address. \end{DoxyCompactList}\item 
+Ws\+::\+Address\+Type \mbox{\hyperlink{class_address_a48bd4690fc42e2c3c4dd7e0a8bc34d46}{get\+Address\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the address type. \end{DoxyCompactList}\item 
+\+\_\+\+Sock\+Addr\+In \& \mbox{\hyperlink{class_address_aa7211a216ca8f74c1481adcf636df48b}{get\+Sock\+Address}} ()
+\begin{DoxyCompactList}\small\item\em Returns the address object. \end{DoxyCompactList}\item 
+int \& \mbox{\hyperlink{class_address_afded81ecea15280fdc179809831551f8}{get\+Sock\+Address\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Returns the size of the address object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_address_ab513b8314ab044e9a4c34f1d1fd24603}{copy}} (const \mbox{\hyperlink{class_address}{Address}} \&other)
+\begin{DoxyCompactList}\small\item\em Copies the content of another address object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_address_a48ed49b37385288126c3f136520f7314}\label{class_address_a48ed49b37385288126c3f136520f7314} 
+\index{Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}!Address@{Address}}
+\index{Address@{Address}!Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}}
+\doxysubsubsection{\texorpdfstring{Address()}{Address()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{concept_ws_1_1_is_sock_addr}{Ws\+::\+Is\+Sock\+Addr}} \+\_\+\+Sock\+Addr\+In, class \+\_\+\+Sock\+Addr $>$ \\
+\mbox{\hyperlink{class_address}{Address}}$<$ \+\_\+\+Sock\+Addr\+In, \+\_\+\+Sock\+Addr $>$\mbox{\hyperlink{class_address}{\+::\+Address}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_address}{Address}}$<$ \+\_\+\+Sock\+Addr\+In, \+\_\+\+Sock\+Addr $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor for the address object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another address object whose value will be copied. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_address_a3487676e9dd094766e059e0d33835186}\label{class_address_a3487676e9dd094766e059e0d33835186} 
+\index{Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}!Address@{Address}}
+\index{Address@{Address}!Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}}
+\doxysubsubsection{\texorpdfstring{Address()}{Address()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{concept_ws_1_1_is_sock_addr}{Ws\+::\+Is\+Sock\+Addr}} \+\_\+\+Sock\+Addr\+In, class \+\_\+\+Sock\+Addr $>$ \\
+\mbox{\hyperlink{class_address}{Address}}$<$ \+\_\+\+Sock\+Addr\+In, \+\_\+\+Sock\+Addr $>$\mbox{\hyperlink{class_address}{\+::\+Address}} (\begin{DoxyParamCaption}\item[{const Ws\+::\+Address\+Type \&}]{address\+Type,  }\item[{int}]{port,  }\item[{const std\+::string \&}]{address }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_address}{Address} class. 
+
+Initializes an address object with the specified type, port, and address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em address\+Type} & The address type (IPv4 or IPv6). \\
+\hline
+{\em port} & The port number. \\
+\hline
+{\em address} & The string representing the address. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_address_ab513b8314ab044e9a4c34f1d1fd24603}\label{class_address_ab513b8314ab044e9a4c34f1d1fd24603} 
+\index{Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}!copy@{copy}}
+\index{copy@{copy}!Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{concept_ws_1_1_is_sock_addr}{Ws\+::\+Is\+Sock\+Addr}} \+\_\+\+Sock\+Addr\+In, class \+\_\+\+Sock\+Addr $>$ \\
+void \mbox{\hyperlink{class_address}{Address}}$<$ \+\_\+\+Sock\+Addr\+In, \+\_\+\+Sock\+Addr $>$\+::copy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_address}{Address}}$<$ \+\_\+\+Sock\+Addr\+In, \+\_\+\+Sock\+Addr $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copies the content of another address object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another address object to be copied. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_address_aede27756d8a69db67bb57c932d574fe1}\label{class_address_aede27756d8a69db67bb57c932d574fe1} 
+\index{Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}!getAddressStr@{getAddressStr}}
+\index{getAddressStr@{getAddressStr}!Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}}
+\doxysubsubsection{\texorpdfstring{getAddressStr()}{getAddressStr()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{concept_ws_1_1_is_sock_addr}{Ws\+::\+Is\+Sock\+Addr}} \+\_\+\+Sock\+Addr\+In, class \+\_\+\+Sock\+Addr $>$ \\
+std\+::string \mbox{\hyperlink{class_address}{Address}}$<$ \+\_\+\+Sock\+Addr\+In, \+\_\+\+Sock\+Addr $>$\+::get\+Address\+Str}
+
+
+
+Returns the string representing the address. 
+
+\begin{DoxyReturn}{Returns}
+String with the address. 
+\end{DoxyReturn}
+\Hypertarget{class_address_a48bd4690fc42e2c3c4dd7e0a8bc34d46}\label{class_address_a48bd4690fc42e2c3c4dd7e0a8bc34d46} 
+\index{Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}!getAddressType@{getAddressType}}
+\index{getAddressType@{getAddressType}!Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}}
+\doxysubsubsection{\texorpdfstring{getAddressType()}{getAddressType()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{concept_ws_1_1_is_sock_addr}{Ws\+::\+Is\+Sock\+Addr}} \+\_\+\+Sock\+Addr\+In, class \+\_\+\+Sock\+Addr $>$ \\
+Ws\+::\+Address\+Type \mbox{\hyperlink{class_address}{Address}}$<$ \+\_\+\+Sock\+Addr\+In, \+\_\+\+Sock\+Addr $>$\+::get\+Address\+Type}
+
+
+
+Returns the address type. 
+
+\begin{DoxyReturn}{Returns}
+The address type (IPv4 or IPv6). 
+\end{DoxyReturn}
+\Hypertarget{class_address_ac2d49203a8b7c377ffe6fda4e610de59}\label{class_address_ac2d49203a8b7c377ffe6fda4e610de59} 
+\index{Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}!getPort@{getPort}}
+\index{getPort@{getPort}!Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}}
+\doxysubsubsection{\texorpdfstring{getPort()}{getPort()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{concept_ws_1_1_is_sock_addr}{Ws\+::\+Is\+Sock\+Addr}} \+\_\+\+Sock\+Addr\+In, class \+\_\+\+Sock\+Addr $>$ \\
+int \mbox{\hyperlink{class_address}{Address}}$<$ \+\_\+\+Sock\+Addr\+In, \+\_\+\+Sock\+Addr $>$\+::get\+Port}
+
+
+
+Returns the port number. 
+
+\begin{DoxyReturn}{Returns}
+The port number. 
+\end{DoxyReturn}
+\Hypertarget{class_address_aa7211a216ca8f74c1481adcf636df48b}\label{class_address_aa7211a216ca8f74c1481adcf636df48b} 
+\index{Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}!getSockAddress@{getSockAddress}}
+\index{getSockAddress@{getSockAddress}!Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}}
+\doxysubsubsection{\texorpdfstring{getSockAddress()}{getSockAddress()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{concept_ws_1_1_is_sock_addr}{Ws\+::\+Is\+Sock\+Addr}} \+\_\+\+Sock\+Addr\+In, class \+\_\+\+Sock\+Addr $>$ \\
+\+\_\+\+Sock\+Addr\+In \& \mbox{\hyperlink{class_address}{Address}}$<$ \+\_\+\+Sock\+Addr\+In, \+\_\+\+Sock\+Addr $>$\+::get\+Sock\+Address}
+
+
+
+Returns the address object. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the address object. 
+\end{DoxyReturn}
+\Hypertarget{class_address_afded81ecea15280fdc179809831551f8}\label{class_address_afded81ecea15280fdc179809831551f8} 
+\index{Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}!getSockAddressSize@{getSockAddressSize}}
+\index{getSockAddressSize@{getSockAddressSize}!Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}}
+\doxysubsubsection{\texorpdfstring{getSockAddressSize()}{getSockAddressSize()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{concept_ws_1_1_is_sock_addr}{Ws\+::\+Is\+Sock\+Addr}} \+\_\+\+Sock\+Addr\+In, class \+\_\+\+Sock\+Addr $>$ \\
+int \& \mbox{\hyperlink{class_address}{Address}}$<$ \+\_\+\+Sock\+Addr\+In, \+\_\+\+Sock\+Addr $>$\+::get\+Sock\+Address\+Size}
+
+
+
+Returns the size of the address object. 
+
+\begin{DoxyReturn}{Returns}
+Size of the address object. 
+\end{DoxyReturn}
+\Hypertarget{class_address_a4f1e2d8118ee94f6192df2ede88159aa}\label{class_address_a4f1e2d8118ee94f6192df2ede88159aa} 
+\index{Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{concept_ws_1_1_is_sock_addr}{Ws\+::\+Is\+Sock\+Addr}} \+\_\+\+Sock\+Addr\+In, class \+\_\+\+Sock\+Addr $>$ \\
+\mbox{\hyperlink{class_address}{Address}}$<$ \+\_\+\+Sock\+Addr\+In, \+\_\+\+Sock\+Addr $>$ \& \mbox{\hyperlink{class_address}{Address}}$<$ \+\_\+\+Sock\+Addr\+In, \+\_\+\+Sock\+Addr $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_address}{Address}}$<$ \+\_\+\+Sock\+Addr\+In, \+\_\+\+Sock\+Addr $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Assignment operator for the address object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another address object whose value will be assigned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the assigned object. 
+\end{DoxyReturn}
+\Hypertarget{class_address_ab9277354ee44beb9ce1ca65ef988e89f}\label{class_address_ab9277354ee44beb9ce1ca65ef988e89f} 
+\index{Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}!setAddress@{setAddress}}
+\index{setAddress@{setAddress}!Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}}
+\doxysubsubsection{\texorpdfstring{setAddress()}{setAddress()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{concept_ws_1_1_is_sock_addr}{Ws\+::\+Is\+Sock\+Addr}} \+\_\+\+Sock\+Addr\+In, class \+\_\+\+Sock\+Addr $>$ \\
+void \mbox{\hyperlink{class_address}{Address}}$<$ \+\_\+\+Sock\+Addr\+In, \+\_\+\+Sock\+Addr $>$\+::set\+Address (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address }\end{DoxyParamCaption})}
+
+
+
+Sets the address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & The string representing the address. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_address_a10b4d2f4c40da6ac1de8bf575173340e}\label{class_address_a10b4d2f4c40da6ac1de8bf575173340e} 
+\index{Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}!setAddressType@{setAddressType}}
+\index{setAddressType@{setAddressType}!Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}}
+\doxysubsubsection{\texorpdfstring{setAddressType()}{setAddressType()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{concept_ws_1_1_is_sock_addr}{Ws\+::\+Is\+Sock\+Addr}} \+\_\+\+Sock\+Addr\+In, class \+\_\+\+Sock\+Addr $>$ \\
+void \mbox{\hyperlink{class_address}{Address}}$<$ \+\_\+\+Sock\+Addr\+In, \+\_\+\+Sock\+Addr $>$\+::set\+Address\+Type (\begin{DoxyParamCaption}\item[{const Ws\+::\+Address\+Type \&}]{address\+Type }\end{DoxyParamCaption})}
+
+
+
+Sets the address type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address\+Type} & The address type (IPv4 or IPv6). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_address_a93a0d650e4cdd4c103c19e60ed3f6b5d}\label{class_address_a93a0d650e4cdd4c103c19e60ed3f6b5d} 
+\index{Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}!setAll@{setAll}}
+\index{setAll@{setAll}!Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}}
+\doxysubsubsection{\texorpdfstring{setAll()}{setAll()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{concept_ws_1_1_is_sock_addr}{Ws\+::\+Is\+Sock\+Addr}} \+\_\+\+Sock\+Addr\+In, class \+\_\+\+Sock\+Addr $>$ \\
+void \mbox{\hyperlink{class_address}{Address}}$<$ \+\_\+\+Sock\+Addr\+In, \+\_\+\+Sock\+Addr $>$\+::set\+All (\begin{DoxyParamCaption}\item[{const Ws\+::\+Address\+Type \&}]{address\+Type,  }\item[{int}]{port,  }\item[{const std\+::string \&}]{address }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_address}{Address} class. 
+
+Initializes an address object with the specified type, port, and address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em address\+Type} & The address type (IPv4 or IPv6). \\
+\hline
+{\em port} & The port number. \\
+\hline
+{\em address} & The string representing the address. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_address_aeb4f56ec646e3685017d44b7298d4ade}\label{class_address_aeb4f56ec646e3685017d44b7298d4ade} 
+\index{Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}!setPort@{setPort}}
+\index{setPort@{setPort}!Address$<$ \_SockAddrIn, \_SockAddr $>$@{Address$<$ \_SockAddrIn, \_SockAddr $>$}}
+\doxysubsubsection{\texorpdfstring{setPort()}{setPort()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{concept_ws_1_1_is_sock_addr}{Ws\+::\+Is\+Sock\+Addr}} \+\_\+\+Sock\+Addr\+In, class \+\_\+\+Sock\+Addr $>$ \\
+void \mbox{\hyperlink{class_address}{Address}}$<$ \+\_\+\+Sock\+Addr\+In, \+\_\+\+Sock\+Addr $>$\+::set\+Port (\begin{DoxyParamCaption}\item[{int}]{port }\end{DoxyParamCaption})}
+
+
+
+Sets the port number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port number. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lib/include/Address.\+h\item 
+Lib/include/Address.\+inl\end{DoxyCompactItemize}

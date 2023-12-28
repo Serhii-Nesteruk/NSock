@@ -59,3 +59,36 @@ std::string Address<_SockAddrIn, _SockAddr>::getAddressStr() const
 {
 	return _addressStr;
 }
+
+template<Ws::IsSockAddr _SockAddrIn, class _SockAddr>
+int& Address<_SockAddrIn, _SockAddr>::getSockAddressSize()
+{
+	_sockAddrSize =  sizeof(_sockAddress);
+	return _sockAddrSize;
+}
+
+template<Ws::IsSockAddr _SockAddrIn, class _SockAddr>
+void Address<_SockAddrIn, _SockAddr>::copy(const Address<_SockAddrIn, _SockAddr>& other)
+{
+	_sockAddress = other._sockAddress;
+	_addressType = other._addressType;
+	_port = other._port;
+	_addressStr = other._addressStr;
+}
+
+template<Ws::IsSockAddr _SockAddrIn, class _SockAddr>
+Address<_SockAddrIn, _SockAddr>& Address<_SockAddrIn, _SockAddr>::operator=(const Address<_SockAddrIn, _SockAddr>& other)
+{
+	if (this != &other)
+	{
+		copy(other);
+	}
+
+	return *this;
+}
+
+template<Ws::IsSockAddr _SockAddrIn, class _SockAddr>
+Address<_SockAddrIn, _SockAddr>::Address(const Address<_SockAddrIn, _SockAddr>& other)
+{
+	*this = other;
+}

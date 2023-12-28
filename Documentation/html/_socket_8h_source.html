@@ -83,74 +83,75 @@ $(function() {
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">template</span>&lt;Ws::IsSockAddr _SockAddr = sockaddr_in&gt;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_socket.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="class_socket.html">Socket</a></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">using </span><a class="code hl_enumeration" href="class_ws_1_1_socket.html#a30a1da37d3070298bccb67179d778830">SocketType</a> = <a class="code hl_enumeration" href="class_ws_1_1_socket.html#a30a1da37d3070298bccb67179d778830">Ws::Socket::SocketType</a>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_socket.html#ad86ab0038e65e36b708b03b430c5d3a7">   21</a></span>    <a class="code hl_function" href="class_socket.html#ad86ab0038e65e36b708b03b430c5d3a7">Socket</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_function" href="class_socket.html#ad86ab0038e65e36b708b03b430c5d3a7">Socket</a>(<span class="keyword">const</span> Ws::AddressType&amp; addressType, <span class="keyword">const</span> <a class="code hl_enumeration" href="class_ws_1_1_socket.html#a30a1da37d3070298bccb67179d778830">SocketType</a>&amp; socketType,</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        _SockAddr sockAddr, SOCKET descriptor);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_function" href="class_socket.html#ad86ab0038e65e36b708b03b430c5d3a7">Socket</a>(<span class="keyword">const</span> Ws::AddressType&amp; addressType, <span class="keyword">const</span> <a class="code hl_enumeration" href="class_ws_1_1_socket.html#a30a1da37d3070298bccb67179d778830">SocketType</a>&amp; socketType);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_function" href="class_socket.html#ad86ab0038e65e36b708b03b430c5d3a7">Socket</a>(<span class="keyword">const</span> Ws::AddressType&amp; addressType, <span class="keyword">const</span> <a class="code hl_enumeration" href="class_ws_1_1_socket.html#a30a1da37d3070298bccb67179d778830">SocketType</a>&amp; socketType,</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        _SockAddr&amp; address, <span class="keywordtype">bool</span> shouldBind = <span class="keyword">false</span>, <span class="keywordtype">bool</span> shouldConnect = <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_function" href="class_socket.html#ad86ab0038e65e36b708b03b430c5d3a7">Socket</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_socket.html">Socket</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_class" href="class_socket.html">Socket</a>&amp; operator=(<span class="keyword">const</span> <a class="code hl_class" href="class_socket.html">Socket</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_class" href="class_socket.html">Socket</a>&amp; operator=(<a class="code hl_class" href="class_socket.html">Socket</a>&amp;&amp; other);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_function" href="class_socket.html#ad86ab0038e65e36b708b03b430c5d3a7">Socket</a>(<a class="code hl_class" href="class_socket.html">Socket</a>&amp;&amp; other);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_function" href="class_socket.html#ab20160b669580b5a9c5f185ca9326d87">~Socket</a>();</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_socket.html#a047faa3abefe96e2ee5dc3666a42d68c">bind</a>(_SockAddr&amp; address);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_socket.html#a9ba1d243b4a95531551fd0486f1fef27">create</a>();</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_socket.html#a9ba1d243b4a95531551fd0486f1fef27">create</a>(<span class="keyword">const</span> Ws::AddressType&amp; addressType, <span class="keyword">const</span> <a class="code hl_enumeration" href="class_ws_1_1_socket.html#a30a1da37d3070298bccb67179d778830">SocketType</a>&amp; socketType);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_socket.html#aa4501d03821261ac4e1506e953085d4b">close</a>();</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_socket.html#ad5190ff361f90de2164ac6c6d265e1ef">listen</a>(<span class="keywordtype">int</span> backlog = SOMAXCONN);</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_socket.html#a24ce40161dc9086b52788b119e0a70b8">connect</a>(_SockAddr&amp; address);</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <a class="code hl_class" href="class_socket.html">Socket</a> <a class="code hl_function" href="class_socket.html#ac71ec77b81020d1e19f85d31cdb51b20">accept</a>();</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="class_socket.html#a2c92bc2dd43df6290deeb80f176cb308">  142</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_socket.html#a2c92bc2dd43df6290deeb80f176cb308">setAddressType</a>();</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_socket.html#ad7aaa65d9da2a850a8dca18b2c9cd7cb">setSocketType</a>(<span class="keyword">const</span> <a class="code hl_enumeration" href="class_ws_1_1_socket.html#a30a1da37d3070298bccb67179d778830">SocketType</a>&amp; socketType);</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_socket.html#a7e9a4edbbc930a214ad784fcf32d938d">setAddress</a>(<span class="keyword">const</span> _SockAddr sockAddr);</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="class_socket.html#a1a1b29a7800a285b4d453f17607400f0">wasCreated</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="class_socket.html#a25372f2f94a5ebfc267211575316b719">wasBound</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_socket.html#ad86ab0038e65e36b708b03b430c5d3a7">   20</a></span>    <a class="code hl_function" href="class_socket.html#ad86ab0038e65e36b708b03b430c5d3a7">Socket</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_function" href="class_socket.html#ad86ab0038e65e36b708b03b430c5d3a7">Socket</a>(<span class="keyword">const</span> Ws::AddressType&amp; addressType, <span class="keyword">const</span> <a class="code hl_enumeration" href="class_ws_1_1_socket.html#a30a1da37d3070298bccb67179d778830">SocketType</a>&amp; socketType,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        _SockAddr&amp; sockAddr, SOCKET descriptor);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_function" href="class_socket.html#ad86ab0038e65e36b708b03b430c5d3a7">Socket</a>(<span class="keyword">const</span> Ws::AddressType&amp; addressType, <span class="keyword">const</span> <a class="code hl_enumeration" href="class_ws_1_1_socket.html#a30a1da37d3070298bccb67179d778830">SocketType</a>&amp; socketType);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_function" href="class_socket.html#ad86ab0038e65e36b708b03b430c5d3a7">Socket</a>(<span class="keyword">const</span> Ws::AddressType&amp; addressType, <span class="keyword">const</span> <a class="code hl_enumeration" href="class_ws_1_1_socket.html#a30a1da37d3070298bccb67179d778830">SocketType</a>&amp; socketType,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        _SockAddr&amp; address, <span class="keywordtype">bool</span> shouldBind = <span class="keyword">false</span>, <span class="keywordtype">bool</span> shouldConnect = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_function" href="class_socket.html#ad86ab0038e65e36b708b03b430c5d3a7">Socket</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_socket.html">Socket</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_class" href="class_socket.html">Socket</a>&amp; operator=(<span class="keyword">const</span> <a class="code hl_class" href="class_socket.html">Socket</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_class" href="class_socket.html">Socket</a>&amp; operator=(<a class="code hl_class" href="class_socket.html">Socket</a>&amp;&amp; other);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_function" href="class_socket.html#ad86ab0038e65e36b708b03b430c5d3a7">Socket</a>(<a class="code hl_class" href="class_socket.html">Socket</a>&amp;&amp; other);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_function" href="class_socket.html#ab20160b669580b5a9c5f185ca9326d87">~Socket</a>();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_socket.html#a047faa3abefe96e2ee5dc3666a42d68c">bind</a>(_SockAddr&amp; address);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_socket.html#a9ba1d243b4a95531551fd0486f1fef27">create</a>();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_socket.html#a9ba1d243b4a95531551fd0486f1fef27">create</a>(<span class="keyword">const</span> Ws::AddressType&amp; addressType, <span class="keyword">const</span> <a class="code hl_enumeration" href="class_ws_1_1_socket.html#a30a1da37d3070298bccb67179d778830">SocketType</a>&amp; socketType);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_socket.html#aa4501d03821261ac4e1506e953085d4b">close</a>();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_socket.html#ad5190ff361f90de2164ac6c6d265e1ef">listen</a>(<span class="keywordtype">int</span> backlog = SOMAXCONN);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_socket.html#a24ce40161dc9086b52788b119e0a70b8">connect</a>(_SockAddr&amp; address);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <a class="code hl_class" href="class_socket.html">Socket</a> <a class="code hl_function" href="class_socket.html#ac71ec77b81020d1e19f85d31cdb51b20">accept</a>();</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="class_socket.html#a2c92bc2dd43df6290deeb80f176cb308">  141</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_socket.html#a2c92bc2dd43df6290deeb80f176cb308">setAddressType</a>();</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_socket.html#ad7aaa65d9da2a850a8dca18b2c9cd7cb">setSocketType</a>(<span class="keyword">const</span> <a class="code hl_enumeration" href="class_ws_1_1_socket.html#a30a1da37d3070298bccb67179d778830">SocketType</a>&amp; socketType);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_socket.html#a7e9a4edbbc930a214ad784fcf32d938d">setAddress</a>(<span class="keyword">const</span> _SockAddr sockAddr);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="class_socket.html#a1a1b29a7800a285b4d453f17607400f0">wasCreated</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="class_socket.html#a25372f2f94a5ebfc267211575316b719">wasBound</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="class_socket.html#a24c629f83a4127c9a772852d4a77e9e4">alreadyListening</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="class_socket.html#a17a24f5189818c6322a78ff94a9db2a5">alreadyConnected</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    [[nodiscard]] SOCKET <a class="code hl_function" href="class_socket.html#a207376407cfbf576cfe7265905db8621">getDescriptor</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keywordtype">void</span> zeroingData(<a class="code hl_class" href="class_socket.html">Socket</a>&amp; sock);</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keywordtype">bool</span> _wasCreated{ <span class="keyword">false</span> };</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keywordtype">bool</span> _wasBound{ <span class="keyword">false</span> };</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keywordtype">bool</span> _alreadyConnected{ <span class="keyword">false</span> };</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="keywordtype">bool</span> _alreadyListening{ <span class="keyword">false</span> };</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    SOCKET _sockDescriptor{ INVALID_SOCKET };</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    Ws::AddressType _addressType = Ws::AddressType::None;</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    SocketType _socketType = SocketType::UNDEFINED;</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    _SockAddr _address;</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>};</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="preprocessor">#include &quot;Socket.inl&quot;</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="class_socket.html#a24c629f83a4127c9a772852d4a77e9e4">alreadyListening</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="class_socket.html#a17a24f5189818c6322a78ff94a9db2a5">alreadyConnected</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    [[nodiscard]] SOCKET <a class="code hl_function" href="class_socket.html#a207376407cfbf576cfe7265905db8621">getDescriptor</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keywordtype">void</span> zeroingData(<a class="code hl_class" href="class_socket.html">Socket</a>&amp; sock);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keywordtype">bool</span> _wasCreated{ <span class="keyword">false</span> };</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keywordtype">bool</span> _wasBound{ <span class="keyword">false</span> };</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="keywordtype">bool</span> _alreadyConnected{ <span class="keyword">false</span> };</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="keywordtype">bool</span> _alreadyListening{ <span class="keyword">false</span> };</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    SOCKET _sockDescriptor{ INVALID_SOCKET };</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    Ws::AddressType _addressType{ Ws::AddressType::None };</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    SocketType _socketType{ SocketType::UNDEFINED };</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    _SockAddr _address;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>};</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="preprocessor">#include &quot;Socket.inl&quot;</span></div>
 <div class="ttc" id="aclass_socket_html"><div class="ttname"><a href="class_socket.html">Socket</a></div><div class="ttdoc">Socket class template.</div><div class="ttdef"><b>Definition</b> Socket.h:14</div></div>
 <div class="ttc" id="aclass_socket_html_a047faa3abefe96e2ee5dc3666a42d68c"><div class="ttname"><a href="class_socket.html#a047faa3abefe96e2ee5dc3666a42d68c">Socket::bind</a></div><div class="ttdeci">void bind(_SockAddr &amp;address)</div><div class="ttdoc">Bind the socket to a specific address.</div><div class="ttdef"><b>Definition</b> Socket.inl:117</div></div>
 <div class="ttc" id="aclass_socket_html_a17a24f5189818c6322a78ff94a9db2a5"><div class="ttname"><a href="class_socket.html#a17a24f5189818c6322a78ff94a9db2a5">Socket::alreadyConnected</a></div><div class="ttdeci">bool alreadyConnected() const</div><div class="ttdoc">Check if the socket is already connected.</div><div class="ttdef"><b>Definition</b> Socket.inl:226</div></div>

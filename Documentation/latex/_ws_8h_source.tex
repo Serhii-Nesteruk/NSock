@@ -62,57 +62,61 @@
 \DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ws_1_1_socket_ae3a3235389daac5c8ab3bf09cc3b2d77}{isClosed}}(SOCKET\ sock);}
 \DoxyCodeLine{00130\ }
 \DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ws_1_1_socket_a56e2541231c1628f0ae46e5d65393cc2}{isValid}}(SOCKET\ sock);}
-\DoxyCodeLine{00138\ \ \ \ \ \};}
-\DoxyCodeLine{00139\ }
-\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ ThrowAnError();}
-\DoxyCodeLine{00144\ }
-\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ handleSocketError(SOCKET\ sock);}
-\DoxyCodeLine{00151\ }
-\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ws_1_1_sock_addr}{SockAddr}}}
-\DoxyCodeLine{00153\ \ \ \ \ \{}
-\DoxyCodeLine{00154\ \ \ \ \ \};}
-\DoxyCodeLine{00155\ }
-\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keyword}{template}<>}
-\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ws_1_1_sock_addr}{SockAddr}}<sockaddr\_in>}
-\DoxyCodeLine{00161\ \ \ \ \ \{}
-\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_a26dadb61c17f902402ea26b665987766}{setType}}(\textcolor{keyword}{const}\ AddressType\&\ addrType,\ sockaddr\_in\&\ sockAddr);}
-\DoxyCodeLine{00170\ }
-\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_aee5a0a449a393d0e0709fb45d10f06a8}{setPort}}(u\_short\ port,\ sockaddr\_in\&\ sockAddr);}
-\DoxyCodeLine{00178\ }
-\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_a20c2c3ada9b8ae2c9b713e4bb8737e07}{setAddress}}(\textcolor{keyword}{const}\ std::string\&\ address,\ sockaddr\_in\&\ sockAddr);}
-\DoxyCodeLine{00186\ }
-\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_a28b6ab5ed8cb034b53f35853949758e4}{getAddress}}(\textcolor{keyword}{const}\ sockaddr\_in\&\ sockAddr);}
-\DoxyCodeLine{00194\ }
-\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{static}\ AddressType\ \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_a55d9212469b6c3686adb5b23f7a631b1}{getAddrType}}();}
-\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ AddressType\ \_addrType\ =\ AddressType::IPv4;}
-\DoxyCodeLine{00203\ \ \ \ \ \};}
-\DoxyCodeLine{00204\ }
-\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keyword}{template}<>}
-\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ws_1_1_sock_addr}{SockAddr}}<sockaddr\_in6>}
-\DoxyCodeLine{00210\ \ \ \ \ \{}
-\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in6_01_4_a7f7d7d86e5cc85902e5121616310d4ac}{setType}}(\textcolor{keyword}{const}\ AddressType\&\ addrType,\ sockaddr\_in6\&\ sockAddr);}
-\DoxyCodeLine{00219\ }
-\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in6_01_4_ac550a67baef621c44f346fc06cdb125d}{setPort}}(u\_short\ port,\ sockaddr\_in6\&\ sockAddr);}
-\DoxyCodeLine{00227\ }
-\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in6_01_4_a7ba835f645a6c0381d2fed36e96a47ff}{setAddress}}(\textcolor{keyword}{const}\ std::string\&\ address,\ sockaddr\_in6\&\ sockAddr);}
-\DoxyCodeLine{00235\ }
-\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in6_01_4_ae0d32ce95266c8b6458db5e889c5ccb2}{getAddress}}(\textcolor{keyword}{const}\ sockaddr\_in6\&\ sockAddr);}
-\DoxyCodeLine{00243\ }
-\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{static}\ AddressType\ \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in6_01_4_a71039fd64a8fbd8dbad33380ce296c6a}{getAddrType}}();}
-\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ AddressType\ \_addrType\ =\ AddressType::IPv6;}
-\DoxyCodeLine{00252\ \ \ \ \ \};}
-\DoxyCodeLine{00253\ }
-\DoxyCodeLine{00257\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4}{SockAddr4}}\ =\ \mbox{\hyperlink{class_ws_1_1_sock_addr}{SockAddr<sockaddr\_in>}};}
-\DoxyCodeLine{00258\ }
-\DoxyCodeLine{00262\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in6_01_4}{SockAddr6}}\ =\ \mbox{\hyperlink{class_ws_1_1_sock_addr}{SockAddr<sockaddr\_in6>}};}
-\DoxyCodeLine{00263\ }
-\DoxyCodeLine{00269\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
-\DoxyCodeLine{00270\ \ \ \ \ \textcolor{keyword}{concept\ }\mbox{\hyperlink{concept_ws_1_1_is_sock_addr}{IsSockAddr}}\ =\ std::is\_same\_v<T,\ sockaddr\_in>;\textcolor{comment}{//std::is\_same\_v<T,\ SockAddr4>\ ||\ std::is\_same\_v<T,\ SockAddr6>}}
-\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ fix\ it}}
-\DoxyCodeLine{00272\ \}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ws_1_1_socket_a39704c7a7216fc23c064b089b37eb47b}{sendto}}(SOCKET\ sock,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ message,\ \textcolor{keywordtype}{int}\ flags,\ \textcolor{keyword}{const}\ sockaddr*\ to,\ \textcolor{keywordtype}{int}\ tolen);}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ws_1_1_socket_a3a8f81540bb882fb12e44c4286fc4a37}{recvfrom}}(SOCKET\ sock,\ \textcolor{keywordtype}{char}*\ buf,\ \textcolor{keywordtype}{int}\ len,\ sockaddr*\ from,\textcolor{keywordtype}{int}\ flags,\ \textcolor{keywordtype}{int}*\ fromlen);}
+\DoxyCodeLine{00167\ \ \ \ \ \};}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ ThrowAnError();}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ handleSocketError(SOCKET\ sock);}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ws_1_1_sock_addr}{SockAddr}}}
+\DoxyCodeLine{00182\ \ \ \ \ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \};}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ws_1_1_sock_addr}{SockAddr}}<sockaddr\_in>}
+\DoxyCodeLine{00190\ \ \ \ \ \{}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_a26dadb61c17f902402ea26b665987766}{setType}}(\textcolor{keyword}{const}\ AddressType\&\ addrType,\ sockaddr\_in\&\ sockAddr);}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_aee5a0a449a393d0e0709fb45d10f06a8}{setPort}}(u\_short\ port,\ sockaddr\_in\&\ sockAddr);}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_a20c2c3ada9b8ae2c9b713e4bb8737e07}{setAddress}}(\textcolor{keyword}{const}\ std::string\&\ address,\ sockaddr\_in\&\ sockAddr);}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_a28b6ab5ed8cb034b53f35853949758e4}{getAddress}}(\textcolor{keyword}{const}\ sockaddr\_in\&\ sockAddr);}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{static}\ AddressType\ \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4_a55d9212469b6c3686adb5b23f7a631b1}{getAddrType}}();}
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ AddressType\ \_addrType\ =\ AddressType::IPv4;}
+\DoxyCodeLine{00232\ \ \ \ \ \};}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00237\ \ \ \ \ \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ws_1_1_sock_addr}{SockAddr}}<sockaddr\_in6>}
+\DoxyCodeLine{00239\ \ \ \ \ \{}
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in6_01_4_a7f7d7d86e5cc85902e5121616310d4ac}{setType}}(\textcolor{keyword}{const}\ AddressType\&\ addrType,\ sockaddr\_in6\&\ sockAddr);}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in6_01_4_ac550a67baef621c44f346fc06cdb125d}{setPort}}(u\_short\ port,\ sockaddr\_in6\&\ sockAddr);}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in6_01_4_a7ba835f645a6c0381d2fed36e96a47ff}{setAddress}}(\textcolor{keyword}{const}\ std::string\&\ address,\ sockaddr\_in6\&\ sockAddr);}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in6_01_4_ae0d32ce95266c8b6458db5e889c5ccb2}{getAddress}}(\textcolor{keyword}{const}\ sockaddr\_in6\&\ sockAddr);}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{static}\ AddressType\ \mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in6_01_4_a71039fd64a8fbd8dbad33380ce296c6a}{getAddrType}}();}
+\DoxyCodeLine{00279\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ AddressType\ \_addrType\ =\ AddressType::IPv6;}
+\DoxyCodeLine{00281\ \ \ \ \ \};}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00286\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in_01_4}{SockAddr4}}\ =\ \mbox{\hyperlink{class_ws_1_1_sock_addr}{SockAddr<sockaddr\_in>}};}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00291\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_ws_1_1_sock_addr_3_01sockaddr__in6_01_4}{SockAddr6}}\ =\ \mbox{\hyperlink{class_ws_1_1_sock_addr}{SockAddr<sockaddr\_in6>}};}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00298\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00299\ \ \ \ \ \textcolor{keyword}{concept\ }\mbox{\hyperlink{concept_ws_1_1_is_sock_addr}{IsSockAddr}}\ =\ std::is\_same\_v<T,\ sockaddr\_in>;\textcolor{comment}{//std::is\_same\_v<T,\ SockAddr4>\ ||\ std::is\_same\_v<T,\ SockAddr6>}}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ fix\ it}}
+\DoxyCodeLine{00301\ \}}
 
 \end{DoxyCode}

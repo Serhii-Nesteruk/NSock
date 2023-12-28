@@ -148,7 +148,7 @@ namespace Ws
          * @note This function is a wrapper around the system-level sendto function.
          * @see sendto
          */
-		static void sendto(SOCKET sock, const char* message, int flags,const sockaddr* to, int tolen);
+		static void sendto(SOCKET sock, const char* message, int flags, const sockaddr* to, int tolen);
 
 		/**
          * @brief Receives data along with information about the sender using the given socket.

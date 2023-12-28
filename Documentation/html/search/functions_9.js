@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['wasbound_0',['wasBound',['../class_socket.html#a25372f2f94a5ebfc267211575316b719',1,'Socket']]],
-  ['wascreated_1',['wasCreated',['../class_socket.html#a1a1b29a7800a285b4d453f17607400f0',1,'Socket']]],
-  ['wasinitialized_2',['wasInitialized',['../class_wsa.html#af3437deb965917817c185aacb693dcb5',1,'Wsa']]]
+  ['tcpsocket_0',['TCPSocket',['../class_t_c_p_socket.html#a587194917b0b05e3480a50c2e417a9a3',1,'TCPSocket::TCPSocket(const Ws::AddressType &amp;addressType, Address&lt; _SockAddr &gt; &amp;socketAddress, bool shouldBind=false, bool shouldConnect=false)'],['../class_t_c_p_socket.html#ad3a09a66f234668d3040d2b3718833ec',1,'TCPSocket::TCPSocket(const Ws::AddressType &amp;addressType, const Address&lt; _SockAddr &gt; &amp;socketAddress, SOCKET descriptor)'],['../class_t_c_p_socket.html#a81ed5fb0aaff824f264d604c336034fd',1,'TCPSocket::TCPSocket(TCPSocket &amp;&amp;other)']]]
 ];

@@ -118,6 +118,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ae3a3235389daac5c8ab3bf09cc3b2d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56e2541231c1628f0ae46e5d65393cc2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ws_1_1_socket.html#a56e2541231c1628f0ae46e5d65393cc2">isValid</a> (SOCKET sock)</td></tr>
 <tr class="separator:a56e2541231c1628f0ae46e5d65393cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39704c7a7216fc23c064b089b37eb47b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ws_1_1_socket.html#a39704c7a7216fc23c064b089b37eb47b">sendto</a> (SOCKET sock, const char *message, int flags, const sockaddr *to, int tolen)</td></tr>
+<tr class="memdesc:a39704c7a7216fc23c064b089b37eb47b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends data to a specific destination using the given socket.  <br /></td></tr>
+<tr class="separator:a39704c7a7216fc23c064b089b37eb47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a8f81540bb882fb12e44c4286fc4a37"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ws_1_1_socket.html#a3a8f81540bb882fb12e44c4286fc4a37">recvfrom</a> (SOCKET sock, char *buf, int len, sockaddr *from, int flags, int *fromlen)</td></tr>
+<tr class="memdesc:a3a8f81540bb882fb12e44c4286fc4a37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives data along with information about the sender using the given socket.  <br /></td></tr>
+<tr class="separator:a3a8f81540bb882fb12e44c4286fc4a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class representing a socket with static methods for socket operations. </p>
@@ -573,6 +579,81 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a3a8f81540bb882fb12e44c4286fc4a37" name="a3a8f81540bb882fb12e44c4286fc4a37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a8f81540bb882fb12e44c4286fc4a37">&#9670;&#160;</a></span>recvfrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Ws::Socket::recvfrom </td>
+          <td>(</td>
+          <td class="paramtype">SOCKET&#160;</td>
+          <td class="paramname"><em>sock</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sockaddr *&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>fromlen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Receives data along with information about the sender using the given socket. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sock</td><td>The socket descriptor. </td></tr>
+    <tr><td class="paramname">buf</td><td>A pointer to the buffer to receive the incoming data. </td></tr>
+    <tr><td class="paramname">len</td><td>The length, in bytes, of the buffer pointed to by 'buf'. </td></tr>
+    <tr><td class="paramname">from</td><td>A pointer to a sockaddr structure that will be filled with the source address. </td></tr>
+    <tr><td class="paramname">flags</td><td>A set of flags that modify the behavior of the function. </td></tr>
+    <tr><td class="paramname">fromlen</td><td>A pointer to the size, in bytes, of the address structure pointed to by 'from'.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This function is a wrapper around the system-level recvfrom function. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_ws_1_1_socket.html#a3a8f81540bb882fb12e44c4286fc4a37" title="Receives data along with information about the sender using the given socket.">recvfrom</a> </dd></dl>
+
+</div>
+</div>
 <a id="a74d7ea36f07c0813d092f2217ba7859d" name="a74d7ea36f07c0813d092f2217ba7859d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a74d7ea36f07c0813d092f2217ba7859d">&#9670;&#160;</a></span>send()</h2>
 
@@ -621,6 +702,74 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a39704c7a7216fc23c064b089b37eb47b" name="a39704c7a7216fc23c064b089b37eb47b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39704c7a7216fc23c064b089b37eb47b">&#9670;&#160;</a></span>sendto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Ws::Socket::sendto </td>
+          <td>(</td>
+          <td class="paramtype">SOCKET&#160;</td>
+          <td class="paramname"><em>sock</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sockaddr *&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tolen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sends data to a specific destination using the given socket. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sock</td><td>The socket descriptor. </td></tr>
+    <tr><td class="paramname">message</td><td>A pointer to the buffer containing the data to be sent. </td></tr>
+    <tr><td class="paramname">flags</td><td>A set of flags that modify the behavior of the function. </td></tr>
+    <tr><td class="paramname">to</td><td>A pointer to the destination address. </td></tr>
+    <tr><td class="paramname">tolen</td><td>The size, in bytes, of the address structure pointed to by 'to'.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This function is a wrapper around the system-level sendto function. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_ws_1_1_socket.html#a39704c7a7216fc23c064b089b37eb47b" title="Sends data to a specific destination using the given socket.">sendto</a> </dd></dl>
 
 </div>
 </div>

@@ -73,6 +73,7 @@ $(function() {
 
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
 <li>accept()&#160;:&#160;<a class="el" href="class_socket.html#ac71ec77b81020d1e19f85d31cdb51b20">Socket&lt; _SockAddr &gt;</a>, <a class="el" href="class_ws_1_1_socket.html#a3f45102831357757f54ca13dbadb6b8b">Ws::Socket</a></li>
+<li>Address()&#160;:&#160;<a class="el" href="class_address.html#a48ed49b37385288126c3f136520f7314">Address&lt; _SockAddrIn, _SockAddr &gt;</a></li>
 <li>alreadyConnected()&#160;:&#160;<a class="el" href="class_socket.html#a17a24f5189818c6322a78ff94a9db2a5">Socket&lt; _SockAddr &gt;</a></li>
 <li>alreadyListening()&#160;:&#160;<a class="el" href="class_socket.html#a24c629f83a4127c9a772852d4a77e9e4">Socket&lt; _SockAddr &gt;</a></li>
 </ul>
@@ -88,14 +89,20 @@ $(function() {
 <li>close()&#160;:&#160;<a class="el" href="class_socket.html#aa4501d03821261ac4e1506e953085d4b">Socket&lt; _SockAddr &gt;</a></li>
 <li>closeSocket()&#160;:&#160;<a class="el" href="class_ws_1_1_socket.html#a993ec58b98ecaaca02493763b9ac5e9d">Ws::Socket</a></li>
 <li>connect()&#160;:&#160;<a class="el" href="class_socket.html#a24ce40161dc9086b52788b119e0a70b8">Socket&lt; _SockAddr &gt;</a>, <a class="el" href="class_ws_1_1_socket.html#abec10f66c2d3e949fbd800dc90fa3cc8">Ws::Socket</a></li>
+<li>copy()&#160;:&#160;<a class="el" href="class_address.html#ab513b8314ab044e9a4c34f1d1fd24603">Address&lt; _SockAddrIn, _SockAddr &gt;</a></li>
 <li>create()&#160;:&#160;<a class="el" href="class_socket.html#a9ba1d243b4a95531551fd0486f1fef27">Socket&lt; _SockAddr &gt;</a>, <a class="el" href="class_ws_1_1_socket.html#a23ffa9be82ebf5ea179525f310ae1d6f">Ws::Socket</a></li>
 </ul>
 
 
 <h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
 <li>getAddress()&#160;:&#160;<a class="el" href="class_ws_1_1_sock_addr_3_01sockaddr__in_01_4.html#a28b6ab5ed8cb034b53f35853949758e4">Ws::SockAddr&lt; sockaddr_in &gt;</a>, <a class="el" href="class_ws_1_1_sock_addr_3_01sockaddr__in6_01_4.html#ae0d32ce95266c8b6458db5e889c5ccb2">Ws::SockAddr&lt; sockaddr_in6 &gt;</a></li>
+<li>getAddressStr()&#160;:&#160;<a class="el" href="class_address.html#aede27756d8a69db67bb57c932d574fe1">Address&lt; _SockAddrIn, _SockAddr &gt;</a></li>
+<li>getAddressType()&#160;:&#160;<a class="el" href="class_address.html#a48bd4690fc42e2c3c4dd7e0a8bc34d46">Address&lt; _SockAddrIn, _SockAddr &gt;</a></li>
 <li>getAddrType()&#160;:&#160;<a class="el" href="class_ws_1_1_sock_addr_3_01sockaddr__in_01_4.html#a55d9212469b6c3686adb5b23f7a631b1">Ws::SockAddr&lt; sockaddr_in &gt;</a>, <a class="el" href="class_ws_1_1_sock_addr_3_01sockaddr__in6_01_4.html#a71039fd64a8fbd8dbad33380ce296c6a">Ws::SockAddr&lt; sockaddr_in6 &gt;</a></li>
 <li>getDescriptor()&#160;:&#160;<a class="el" href="class_socket.html#a207376407cfbf576cfe7265905db8621">Socket&lt; _SockAddr &gt;</a></li>
+<li>getPort()&#160;:&#160;<a class="el" href="class_address.html#ac2d49203a8b7c377ffe6fda4e610de59">Address&lt; _SockAddrIn, _SockAddr &gt;</a></li>
+<li>getSockAddress()&#160;:&#160;<a class="el" href="class_address.html#aa7211a216ca8f74c1481adcf636df48b">Address&lt; _SockAddrIn, _SockAddr &gt;</a></li>
+<li>getSockAddressSize()&#160;:&#160;<a class="el" href="class_address.html#afded81ecea15280fdc179809831551f8">Address&lt; _SockAddrIn, _SockAddr &gt;</a></li>
 </ul>
 
 
@@ -112,7 +119,7 @@ $(function() {
 
 
 <h3><a id="index_o" name="index_o"></a>- o -</h3><ul>
-<li>operator=()&#160;:&#160;<a class="el" href="class_socket.html#ae313a31c1d633cf7f0521997bbe779c7">Socket&lt; _SockAddr &gt;</a></li>
+<li>operator=()&#160;:&#160;<a class="el" href="class_address.html#a4f1e2d8118ee94f6192df2ede88159aa">Address&lt; _SockAddrIn, _SockAddr &gt;</a>, <a class="el" href="class_socket.html#ae313a31c1d633cf7f0521997bbe779c7">Socket&lt; _SockAddr &gt;</a></li>
 </ul>
 
 
@@ -122,19 +129,28 @@ $(function() {
 
 
 <h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
+<li>received()&#160;:&#160;<a class="el" href="class_t_c_p_socket.html#a834368b31e2ab2d36c917d1577f9da69">TCPSocket&lt; _SockAddr &gt;</a></li>
 <li>recv()&#160;:&#160;<a class="el" href="class_ws_1_1_socket.html#a8144f0ffdf74a82c50333f6a05888b98">Ws::Socket</a></li>
+<li>recvfrom()&#160;:&#160;<a class="el" href="class_ws_1_1_socket.html#a3a8f81540bb882fb12e44c4286fc4a37">Ws::Socket</a></li>
 </ul>
 
 
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
-<li>send()&#160;:&#160;<a class="el" href="class_ws_1_1_socket.html#a74d7ea36f07c0813d092f2217ba7859d">Ws::Socket</a></li>
-<li>setAddress()&#160;:&#160;<a class="el" href="class_socket.html#a7e9a4edbbc930a214ad784fcf32d938d">Socket&lt; _SockAddr &gt;</a>, <a class="el" href="class_ws_1_1_sock_addr_3_01sockaddr__in_01_4.html#a20c2c3ada9b8ae2c9b713e4bb8737e07">Ws::SockAddr&lt; sockaddr_in &gt;</a>, <a class="el" href="class_ws_1_1_sock_addr_3_01sockaddr__in6_01_4.html#a7ba835f645a6c0381d2fed36e96a47ff">Ws::SockAddr&lt; sockaddr_in6 &gt;</a></li>
-<li>setAddressType()&#160;:&#160;<a class="el" href="class_socket.html#a2c92bc2dd43df6290deeb80f176cb308">Socket&lt; _SockAddr &gt;</a></li>
-<li>setPort()&#160;:&#160;<a class="el" href="class_ws_1_1_sock_addr_3_01sockaddr__in_01_4.html#aee5a0a449a393d0e0709fb45d10f06a8">Ws::SockAddr&lt; sockaddr_in &gt;</a>, <a class="el" href="class_ws_1_1_sock_addr_3_01sockaddr__in6_01_4.html#ac550a67baef621c44f346fc06cdb125d">Ws::SockAddr&lt; sockaddr_in6 &gt;</a></li>
+<li>send()&#160;:&#160;<a class="el" href="class_t_c_p_socket.html#a8509991f6bdb8337ea7bae1e3c3a147c">TCPSocket&lt; _SockAddr &gt;</a>, <a class="el" href="class_ws_1_1_socket.html#a74d7ea36f07c0813d092f2217ba7859d">Ws::Socket</a></li>
+<li>sendto()&#160;:&#160;<a class="el" href="class_ws_1_1_socket.html#a39704c7a7216fc23c064b089b37eb47b">Ws::Socket</a></li>
+<li>setAddress()&#160;:&#160;<a class="el" href="class_address.html#ab9277354ee44beb9ce1ca65ef988e89f">Address&lt; _SockAddrIn, _SockAddr &gt;</a>, <a class="el" href="class_socket.html#a7e9a4edbbc930a214ad784fcf32d938d">Socket&lt; _SockAddr &gt;</a>, <a class="el" href="class_ws_1_1_sock_addr_3_01sockaddr__in_01_4.html#a20c2c3ada9b8ae2c9b713e4bb8737e07">Ws::SockAddr&lt; sockaddr_in &gt;</a>, <a class="el" href="class_ws_1_1_sock_addr_3_01sockaddr__in6_01_4.html#a7ba835f645a6c0381d2fed36e96a47ff">Ws::SockAddr&lt; sockaddr_in6 &gt;</a></li>
+<li>setAddressType()&#160;:&#160;<a class="el" href="class_address.html#a10b4d2f4c40da6ac1de8bf575173340e">Address&lt; _SockAddrIn, _SockAddr &gt;</a>, <a class="el" href="class_socket.html#a2c92bc2dd43df6290deeb80f176cb308">Socket&lt; _SockAddr &gt;</a></li>
+<li>setAll()&#160;:&#160;<a class="el" href="class_address.html#a93a0d650e4cdd4c103c19e60ed3f6b5d">Address&lt; _SockAddrIn, _SockAddr &gt;</a></li>
+<li>setPort()&#160;:&#160;<a class="el" href="class_address.html#aeb4f56ec646e3685017d44b7298d4ade">Address&lt; _SockAddrIn, _SockAddr &gt;</a>, <a class="el" href="class_ws_1_1_sock_addr_3_01sockaddr__in_01_4.html#aee5a0a449a393d0e0709fb45d10f06a8">Ws::SockAddr&lt; sockaddr_in &gt;</a>, <a class="el" href="class_ws_1_1_sock_addr_3_01sockaddr__in6_01_4.html#ac550a67baef621c44f346fc06cdb125d">Ws::SockAddr&lt; sockaddr_in6 &gt;</a></li>
 <li>setSocketType()&#160;:&#160;<a class="el" href="class_socket.html#ad7aaa65d9da2a850a8dca18b2c9cd7cb">Socket&lt; _SockAddr &gt;</a></li>
 <li>setType()&#160;:&#160;<a class="el" href="class_ws_1_1_sock_addr_3_01sockaddr__in_01_4.html#a26dadb61c17f902402ea26b665987766">Ws::SockAddr&lt; sockaddr_in &gt;</a>, <a class="el" href="class_ws_1_1_sock_addr_3_01sockaddr__in6_01_4.html#a7f7d7d86e5cc85902e5121616310d4ac">Ws::SockAddr&lt; sockaddr_in6 &gt;</a></li>
 <li>Socket()&#160;:&#160;<a class="el" href="class_socket.html#ad86ab0038e65e36b708b03b430c5d3a7">Socket&lt; _SockAddr &gt;</a></li>
 <li>SocketType&#160;:&#160;<a class="el" href="class_ws_1_1_socket.html#a30a1da37d3070298bccb67179d778830">Ws::Socket</a></li>
+</ul>
+
+
+<h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
+<li>TCPSocket()&#160;:&#160;<a class="el" href="class_t_c_p_socket.html#a587194917b0b05e3480a50c2e417a9a3">TCPSocket&lt; _SockAddr &gt;</a></li>
 </ul>
 
 
@@ -147,6 +163,7 @@ $(function() {
 
 <h3><a id="index__7E" name="index__7E"></a>- ~ -</h3><ul>
 <li>~Socket()&#160;:&#160;<a class="el" href="class_socket.html#ab20160b669580b5a9c5f185ca9326d87">Socket&lt; _SockAddr &gt;</a></li>
+<li>~TCPSocket()&#160;:&#160;<a class="el" href="class_t_c_p_socket.html#a687e155b108c325aa56b539c250865b4">TCPSocket&lt; _SockAddr &gt;</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

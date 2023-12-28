@@ -161,7 +161,7 @@ void Ws::Socket::recv(SOCKET sock, char* buf, int bufSize, int flags)
 
 void Ws::Socket::sendto(SOCKET sock, const char* message, int flags, const sockaddr* to, int tolen)
 {
-	int sendingResult = ::sendto(sock, message, strlen(message), flags, to, tolen);
+	int sendingResult = ::sendto(sock, message, strlen(message) + 1, flags, to, tolen);
 	if (sendingResult == SOCKET_ERROR)
 	{
 		handleSocketError(sock);

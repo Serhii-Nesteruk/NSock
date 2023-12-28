@@ -70,6 +70,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_socket-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Socket&lt; _SockAddr &gt; Class Template Reference</div></div>
@@ -80,16 +81,31 @@ $(function() {
  <a href="class_socket.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_socket_8h_source.html">Socket.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Socket&lt; _SockAddr &gt;:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_socket.png" usemap="#Socket_3C_20_5FSockAddr_20_3E_map" alt=""/>
+  <map id="Socket_3C_20_5FSockAddr_20_3E_map" name="Socket_3C_20_5FSockAddr_20_3E_map">
+<area href="class_t_c_p_socket.html" alt="TCPSocket&lt; _SockAddr &gt;" shape="rect" coords="0,56,161,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:af0abeef17705c9284b5624c4c9cbfe80"><td class="memItemLeft" align="right" valign="top"><a id="af0abeef17705c9284b5624c4c9cbfe80" name="af0abeef17705c9284b5624c4c9cbfe80"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SocketType</b> = <a class="el" href="class_ws_1_1_socket.html#a30a1da37d3070298bccb67179d778830">Ws::Socket::SocketType</a></td></tr>
+<tr class="separator:af0abeef17705c9284b5624c4c9cbfe80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad86ab0038e65e36b708b03b430c5d3a7"><td class="memItemLeft" align="right" valign="top"><a id="ad86ab0038e65e36b708b03b430c5d3a7" name="ad86ab0038e65e36b708b03b430c5d3a7"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Socket</b> ()=default</td></tr>
 <tr class="memdesc:ad86ab0038e65e36b708b03b430c5d3a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
 <tr class="separator:ad86ab0038e65e36b708b03b430c5d3a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3751af55ae5ee051c5ae9f0b9d0345ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a3751af55ae5ee051c5ae9f0b9d0345ee">Socket</a> (const Ws::AddressType &amp;addressType, const <a class="el" href="class_ws_1_1_socket.html#a30a1da37d3070298bccb67179d778830">SocketType</a> &amp;socketType, _SockAddr sockAddr, SOCKET descriptor)</td></tr>
-<tr class="memdesc:a3751af55ae5ee051c5ae9f0b9d0345ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameterized constructor.  <br /></td></tr>
-<tr class="separator:a3751af55ae5ee051c5ae9f0b9d0345ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef8e4ce8a82f90b5e3d65d5c000d726f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#aef8e4ce8a82f90b5e3d65d5c000d726f">Socket</a> (const Ws::AddressType &amp;addressType, const <a class="el" href="class_ws_1_1_socket.html#a30a1da37d3070298bccb67179d778830">SocketType</a> &amp;socketType, _SockAddr &amp;sockAddr, SOCKET descriptor)</td></tr>
+<tr class="memdesc:aef8e4ce8a82f90b5e3d65d5c000d726f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameterized constructor.  <br /></td></tr>
+<tr class="separator:aef8e4ce8a82f90b5e3d65d5c000d726f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08b617112e3c8eed8d2ccea5b74bc294"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_socket.html#a08b617112e3c8eed8d2ccea5b74bc294">Socket</a> (const Ws::AddressType &amp;addressType, const <a class="el" href="class_ws_1_1_socket.html#a30a1da37d3070298bccb67179d778830">SocketType</a> &amp;socketType)</td></tr>
 <tr class="memdesc:a08b617112e3c8eed8d2ccea5b74bc294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with address type and socket type.  <br /></td></tr>
 <tr class="separator:a08b617112e3c8eed8d2ccea5b74bc294"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,8 +178,8 @@ class Socket&lt; _SockAddr &gt;</div><p><a class="el" href="class_socket.html" t
   </dd>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a3751af55ae5ee051c5ae9f0b9d0345ee" name="a3751af55ae5ee051c5ae9f0b9d0345ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3751af55ae5ee051c5ae9f0b9d0345ee">&#9670;&#160;</a></span>Socket() <span class="overload">[1/4]</span></h2>
+<a id="aef8e4ce8a82f90b5e3d65d5c000d726f" name="aef8e4ce8a82f90b5e3d65d5c000d726f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef8e4ce8a82f90b5e3d65d5c000d726f">&#9670;&#160;</a></span>Socket() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -185,7 +201,7 @@ template&lt;<a class="el" href="concept_ws_1_1_is_sock_addr.html">Ws::IsSockAddr
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">_SockAddr&#160;</td>
+          <td class="paramtype">_SockAddr &amp;&#160;</td>
           <td class="paramname"><em>sockAddr</em>, </td>
         </tr>
         <tr>

@@ -1,0 +1,100 @@
+\doxysection{Address.\+inl}
+\hypertarget{_address_8inl_source}{}\label{_address_8inl_source}\index{Lib/include/Address.inl@{Lib/include/Address.inl}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}Address.h"{}}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{keyword}{template}<Ws::IsSockAddr\ \_SockAddrIn,\ \textcolor{keyword}{class}\ \_SockAddr>}
+\DoxyCodeLine{00004\ \mbox{\hyperlink{class_address}{Address<\_SockAddrIn,\ \_SockAddr>::Address}}(\textcolor{keyword}{const}\ Ws::AddressType\&\ addressType,\ \textcolor{keywordtype}{int}\ port,}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ address)}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ setAll(addressType,\ port,\ address);}
+\DoxyCodeLine{00008\ \}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{template}<Ws::IsSockAddr\ \_SockAddrIn,\ \textcolor{keyword}{class}\ \_SockAddr>}
+\DoxyCodeLine{00011\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_address_a93a0d650e4cdd4c103c19e60ed3f6b5d}{Address<\_SockAddrIn,\ \_SockAddr>::setAll}}(\textcolor{keyword}{const}\ Ws::AddressType\&\ addressType,\ \textcolor{keywordtype}{int}\ port,\ \textcolor{keyword}{const}\ std::string\&\ address)}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ setAddressType(addressType);}
+\DoxyCodeLine{00014\ \ \ \ \ setPort(port);}
+\DoxyCodeLine{00015\ \ \ \ \ setAddress(address);}
+\DoxyCodeLine{00016\ \}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{template}<Ws::IsSockAddr\ \_SockAddrIn,\ \textcolor{keyword}{class}\ \_SockAddr>}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_address_a10b4d2f4c40da6ac1de8bf575173340e}{Address<\_SockAddrIn,\ \_SockAddr>::setAddressType}}(\textcolor{keyword}{const}\ Ws::AddressType\&\ addressType)}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \_SockAddr::setType(addressType,\ \_sockAddress);}
+\DoxyCodeLine{00022\ \ \ \ \ \_addressType\ =\ addressType;}
+\DoxyCodeLine{00023\ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{template}<Ws::IsSockAddr\ \_SockAddrIn,\ \textcolor{keyword}{class}\ \_SockAddr>}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_address_aeb4f56ec646e3685017d44b7298d4ade}{Address<\_SockAddrIn,\ \_SockAddr>::setPort}}(\textcolor{keywordtype}{int}\ port)}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \_SockAddr::setPort(port,\ \_sockAddress);}
+\DoxyCodeLine{00029\ \ \ \ \ \_port\ =\ port;}
+\DoxyCodeLine{00030\ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{template}<Ws::IsSockAddr\ \_SockAddrIn,\ \textcolor{keyword}{class}\ \_SockAddr>}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_address_ab9277354ee44beb9ce1ca65ef988e89f}{Address<\_SockAddrIn,\ \_SockAddr>::setAddress}}(\textcolor{keyword}{const}\ std::string\&\ address)}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \_SockAddr::setAddress(address,\ \_sockAddress);}
+\DoxyCodeLine{00036\ \ \ \ \ \_addressStr\ =\ address;}
+\DoxyCodeLine{00037\ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{template}<Ws::IsSockAddr\ \_SockAddrIn,\ \textcolor{keyword}{class}\ \_SockAddr>}
+\DoxyCodeLine{00040\ \_SockAddrIn\&\ \mbox{\hyperlink{class_address_aa7211a216ca8f74c1481adcf636df48b}{Address<\_SockAddrIn,\ \_SockAddr>::getSockAddress}}()}
+\DoxyCodeLine{00041\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{return}\ \_sockAddress;}
+\DoxyCodeLine{00043\ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{template}<Ws::IsSockAddr\ \_SockAddrIn,\ \textcolor{keyword}{class}\ \_SockAddr>}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_address_ac2d49203a8b7c377ffe6fda4e610de59}{Address<\_SockAddrIn,\ \_SockAddr>::getPort}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00047\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{return}\ \_port;}
+\DoxyCodeLine{00049\ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{template}<Ws::IsSockAddr\ \_SockAddrIn,\ \textcolor{keyword}{class}\ \_SockAddr>}
+\DoxyCodeLine{00052\ Ws::AddressType\ \mbox{\hyperlink{class_address_a48bd4690fc42e2c3c4dd7e0a8bc34d46}{Address<\_SockAddrIn,\ \_SockAddr>::getAddressType}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00053\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{return}\ \_addressType;}
+\DoxyCodeLine{00055\ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{template}<Ws::IsSockAddr\ \_SockAddrIn,\ \textcolor{keyword}{class}\ \_SockAddr>}
+\DoxyCodeLine{00058\ std::string\ \mbox{\hyperlink{class_address_aede27756d8a69db67bb57c932d574fe1}{Address<\_SockAddrIn,\ \_SockAddr>::getAddressStr}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00059\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordflow}{return}\ \_addressStr;}
+\DoxyCodeLine{00061\ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{template}<Ws::IsSockAddr\ \_SockAddrIn,\ \textcolor{keyword}{class}\ \_SockAddr>}
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{int}\&\ \mbox{\hyperlink{class_address_afded81ecea15280fdc179809831551f8}{Address<\_SockAddrIn,\ \_SockAddr>::getSockAddressSize}}()}
+\DoxyCodeLine{00065\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \_sockAddrSize\ =\ \ \textcolor{keyword}{sizeof}(\_sockAddress);}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordflow}{return}\ \_sockAddrSize;}
+\DoxyCodeLine{00068\ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{template}<Ws::IsSockAddr\ \_SockAddrIn,\ \textcolor{keyword}{class}\ \_SockAddr>}
+\DoxyCodeLine{00071\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_address_ab513b8314ab044e9a4c34f1d1fd24603}{Address<\_SockAddrIn,\ \_SockAddr>::copy}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_address}{Address<\_SockAddrIn,\ \_SockAddr>}}\&\ other)}
+\DoxyCodeLine{00072\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \_sockAddress\ =\ other.\_sockAddress;}
+\DoxyCodeLine{00074\ \ \ \ \ \_addressType\ =\ other.\_addressType;}
+\DoxyCodeLine{00075\ \ \ \ \ \_port\ =\ other.\_port;}
+\DoxyCodeLine{00076\ \ \ \ \ \_addressStr\ =\ other.\_addressStr;}
+\DoxyCodeLine{00077\ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{template}<Ws::IsSockAddr\ \_SockAddrIn,\ \textcolor{keyword}{class}\ \_SockAddr>}
+\DoxyCodeLine{00080\ \mbox{\hyperlink{class_address}{Address<\_SockAddrIn,\ \_SockAddr>}}\&\ \mbox{\hyperlink{class_address_a4f1e2d8118ee94f6192df2ede88159aa}{Address<\_SockAddrIn,\ \_SockAddr>::operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_address}{Address<\_SockAddrIn,\ \_SockAddr>}}\&\ other)}
+\DoxyCodeLine{00081\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&other)}
+\DoxyCodeLine{00083\ \ \ \ \ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ copy(other);}
+\DoxyCodeLine{00085\ \ \ \ \ \}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00088\ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{keyword}{template}<Ws::IsSockAddr\ \_SockAddrIn,\ \textcolor{keyword}{class}\ \_SockAddr>}
+\DoxyCodeLine{00091\ \mbox{\hyperlink{class_address}{Address<\_SockAddrIn,\ \_SockAddr>::Address}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_address}{Address<\_SockAddrIn,\ \_SockAddr>}}\&\ other)}
+\DoxyCodeLine{00092\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ *\textcolor{keyword}{this}\ =\ other;}
+\DoxyCodeLine{00094\ \}}
+
+\end{DoxyCode}
